@@ -89,21 +89,86 @@
    <div class="blog_taital">
          <div class="container">
             
-      <div class="intro"> 
-         <h1 class="about_taital">Image Gallery</h1> 
-         <p class="about_text">Click the thumbnails</p> 
-        <div id="image-gallery">
-          <img id="current-image" src="images/image 1.jpg" alt="Image 1">
-         <div id="image-thumbs">
-         
-         </div>
-         </div>
-       </div> 
-      <script src="js/script.js"></script>
+      <div class="header" id="myHeader">
+         <h1 style="color: black;">Image Galery</h1>
+   <button class="btn active" onclick="one()">1</button>
+   <button class="btn" onclick="two()">2</button>
+   <button class="btn" onclick="four()">3</button>
+ </div>
 
-      <p class="about_text"> Each of the images you can see above are taken from each of Aharya's programs. You can expect many more beautiful and different images through this website</p>
+<div class="row">
+   <div class="column">
+      <img src="images/image1.jpg">
+    <img src="images/image 2.png">
+    <img src="images/image3.jpg">
+    <img src="images/image3.jpg">
+    <img src="images/image4.JPG">
+    <img src="images/image5.JPG">
+    <img src="images/image6.jpg">
+  </div>
+  <div class="column">
+    <img src="images/image7.jpg">
+    <img src="images/image8.jpg">
+    <img src="images/image9.jpg">
+    <img src="images/image10.jpg">
+    <img src="images/image11.jpg">
+    <img src="images/image12.jpg">
+  </div>
+  <div class="column">
+    <img src="images/image13.jpg">
+    <img src="images/image14.jpg">
+    <!-- <img src="images/image15.jpg"> -->
+    <img src="images/image17.jpg">
+    <img src="images/image16.jpg">
+    <img src="images/image18.jpg">
+    <img src="images/image19.png">
+  </div>
+  </div>
+
+  <script>
+   // Get the elements with class="column"
+   var elements = document.getElementsByClassName("column");
+   
+   // Declare a loop variable
+   var i;
+   
+   // Full-width images
+   function one() {
+       for (i = 0; i < elements.length; i++) {
+       elements[i].style.msFlex = "100%";  // IE10
+       elements[i].style.flex = "100%";
+     }
+   }
+   
+   // Two images side by side
+   function two() {
+     for (i = 0; i < elements.length; i++) {
+       elements[i].style.msFlex = "50%";  // IE10
+       elements[i].style.flex = "50%";
+     }
+   }
+   
+   // Four images side by side
+   function four() {
+     for (i = 0; i < elements.length; i++) {
+       elements[i].style.msFlex = "25%";  // IE10
+       elements[i].style.flex = "25%";
+     }
+   }
+   
+   // Add active class to the current button (highlight it)
+   var header = document.getElementById("myHeader");
+   var btns = header.getElementsByClassName("btn");
+   for (var i = 0; i < btns.length; i++) {
+     btns[i].addEventListener("click", function() {
+       var current = document.getElementsByClassName("active");
+       current[0].className = current[0].className.replace(" active", "");
+       this.className += " active";
+     });
+   }
+   </script>
    </div>
-</div>
+</div> 
           
 <div class="footer_section layout_padding">
    <div class="container">
