@@ -12,6 +12,7 @@
       <title>Galery</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
+      
       <meta name="author" content="">
       <!-- bootstrap css -->
       <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
@@ -56,19 +57,16 @@
                         </li>
                           <li class="nav-item">
                            <a class="nav-link" href="Festival.html">Festival</a>   
-                  
                         </li>
-                        <li class="nav-item">
-                           <a class="nav-link" href="gallery.html">Gallery</a>   
-                  
-                        </li>
-
-                        <li class="nav-item">
-                           <a class="nav-link" href="videos.html">Videos</a>   
-                  
-                        </li>
-                       
-                        <li class="nav-item">
+                     </li>
+                     <li class="nav-item">
+                      <a class="nav-link" href="gallery.html">Gallery</a>   
+                   </li>
+                   <li class="nav-item">
+                     <a class="nav-link" href="videos.html">Videos</a>   
+                  </li>
+                     
+                             <li class="nav-item">
                            <a class="nav-link " href="contact.html">Contact</a>
                         </li>
                      </ul>
@@ -84,8 +82,9 @@
                      <li><a href="Festival.html">Festival</a></li>
                      <li><a href="about.html">About</a></li>
                      <li><a href="services.html">Services</a></li>
-                     <li><a href="gallery.html">Gallery</a></li>
                      <li><a href="videos.html">Videos</a></li>
+                     <li> <a href="gallery.html">Gallery</a></li>
+                     
                      <li><a href="contact.html">Contact us</a></li>
                   </ul>
                </div>
@@ -93,86 +92,91 @@
          </div>
    
    <div class="blog_taital">
-         <div class="container">
-            
-      <div class="header" id="myHeader">
-         <h1 style="color: black;">Image Galery</h1>
-   <button class="btn active" onclick="one()">1</button>
-   <button class="btn" onclick="two()">2</button>
-   <button class="btn" onclick="four()">3</button>
- </div>
+      <h1 class="about_taital">Natyasasthram Theory Sessions</h1>
+      <section id="sec-1">
+         <div class="container1">
+           <div class="main-video">
+            <iframe src="https://www.youtube.com/embed/85CbBa0q-Cc?fs=0" width="100%" height="100%" > </iframe>
+            <i class='bx bx-x close'></i>
+           </div>
+           <div class="videos">
+            <iframe src="https://www.youtube.com/embed/85CbBa0q-Cc?fs=0" width="100%" height="100%"></iframe>
+            <i class='bx bx-play-circle'></i>
+           </div>
+           <div class="videos">
+            <iframe src="https://www.youtube.com/embed/N9deyjjYGPg?fs=0" width="100%" height="100%"></iframe>
+            <i class='bx bx-play-circle'></i>
+           </div>
+           <div class="videos">
+            <iframe src="https://www.youtube.com/embed/Qn12SlW6hP4?fs=0" width="100%" height="100%" > </iframe>
+            <i class='bx bx-play-circle'></i>
+           </div>
+           <div class="videos">
+            <iframe src="https://www.youtube.com/embed/NoAtMnMq2_A?fs=0" width="100%" height="100%" > </iframe>
+            <i class='bx bx-play-circle'></i>
+           </div>
+           <div class="videos">
+            <iframe src="https://www.youtube.com/embed/8BA-nvG6frw?fs=0" width="100%" height="100%" > </iframe>
+            <i class='bx bx-play-circle'></i>
+           </div>
+           <div class="videos">
+            <iframe src="https://www.youtube.com/embed/MvWHET5FAZ8?fs=0" width="100%" height="100%" > </iframe>
+            <i class='bx bx-play-circle'></i>
+           
+         </div>
+         <a href="#sec-2">
+            <div class="scroll-down"></div>
+         </a>
+           </div>
+         </section>
 
-<div class="row">
-   <div class="column">
-      <img src="images/image1.jpg">
-    <img src="images/image 2.png">
-    <img src="images/image3.jpg">
-    <img src="images/image3.jpg">
-    <img src="images/image4.JPG">
-    <img src="images/image5.JPG">
-    <img src="images/image6.jpg">
-  </div>
-  <div class="column">
-    <img src="images/image7.jpg">
-    <img src="images/image8.jpg">
-    <img src="images/image9.jpg">
-    <img src="images/image10.jpg">
-    <img src="images/image11.jpg">
-    <img src="images/image12.jpg">
-  </div>
-  <div class="column">
-    <img src="images/image13.jpg">
-    <img src="images/image14.jpg">
-    <!-- <img src="images/image15.jpg"> -->
-    <img src="images/image17.jpg">
-    <img src="images/image16.jpg">
-    <img src="images/image18.jpg">
-    <img src="images/image19.png">
-  </div>
-  </div>
-
-  <script>
-   // Get the elements with class="column"
-   var elements = document.getElementsByClassName("column");
-   
-   // Declare a loop variable
-   var i;
-   
-   // Full-width images
-   function one() {
-       for (i = 0; i < elements.length; i++) {
-       elements[i].style.msFlex = "100%";  // IE10
-       elements[i].style.flex = "100%";
-     }
-   }
-   
-   // Two images side by side
-   function two() {
-     for (i = 0; i < elements.length; i++) {
-       elements[i].style.msFlex = "50%";  // IE10
-       elements[i].style.flex = "50%";
-     }
-   }
-   
-   // Four images side by side
-   function four() {
-     for (i = 0; i < elements.length; i++) {
-       elements[i].style.msFlex = "25%";  // IE10
-       elements[i].style.flex = "25%";
-     }
-   }
-   
-   // Add active class to the current button (highlight it)
-   var header = document.getElementById("myHeader");
-   var btns = header.getElementsByClassName("btn");
-   for (var i = 0; i < btns.length; i++) {
-     btns[i].addEventListener("click", function() {
-       var current = document.getElementsByClassName("active");
-       current[0].className = current[0].className.replace(" active", "");
-       this.className += " active";
-     });
-   }
-   </script>
+       <div class="blog_taital">
+         <h1 class="about_taital">Bharathanatyam Videos</h1>
+         <section id="sec-2">
+            <div class="container1">
+              <div class="main-video">
+               <iframe src="https://www.youtube.com/embed/9yTB25uiCIo?fs=0" width="100%" height="100%" > </iframe>
+               <i class='bx bx-x close'></i>
+              </div>
+              <div class="videos">
+               <iframe src="https://www.youtube.com/embed/MFpyzWfbBOo?fs=0" width="100%" height="100%"></iframe>
+               <i class='bx bx-play-circle'></i>
+              </div>
+              <div class="videos">
+               <iframe src="https://www.youtube.com/embed/ZPDXIVvjWbI?fs=0" width="100%" height="100%"></iframe>
+               <i class='bx bx-play-circle'></i>
+              </div>
+              <div class="videos">
+               <iframe src="https://www.youtube.com/embed/9yTB25uiCIo?fs=0" width="100%" height="100%" > </iframe>
+               <i class='bx bx-play-circle'></i>
+              </div>
+            </div>
+          </section>
+     
+       <script>
+         const section = document.querySelector("section"),
+         mainVideo = document.querySelector(".main-video video"),
+          videos = document.querySelectorAll(".videos"),
+          close = document.querySelector(".close");
+     
+          for (var i = 0; i < videos.length; i++) {
+            videos[i].addEventListener("click", (e)=>{
+              const target = e.target;
+              section.classList.add("active");
+              target.classList.add("active");
+              let src = document.querySelector(".videos.active video").src;
+              mainVideo.src = src;
+     
+              close.addEventListener("click", ()=>{
+                section.classList.remove("active");
+                target.classList.remove("active");
+                mainVideo.src = "";
+              });
+            });
+          };
+       </script>
+     
+     
    </div>
 </div> 
           
