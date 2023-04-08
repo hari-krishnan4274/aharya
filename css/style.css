@@ -220,6 +220,17 @@ h1::before{
     box-shadow: 3px 3px 5px lightgrey;
 }*/
 
+.blink {
+    animation: blinker 1.5s linear infinite;
+    color: red;
+    font-family: sans-serif;
+}
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
 .button {
     border: none;
     color: white;
@@ -230,10 +241,39 @@ h1::before{
      text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 10px;
      margin: 4px 2px; 
      cursor: pointer;
-  } */
+  } 
+
+  .button1 {
+    border: none;
+    color: white;
+    background-color: red;
+    width: 100%;
+    height: auto;
+     padding: 15px 32px; 
+     text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+     margin: 4px 2px; 
+     cursor: pointer;
+  }
+  .button2 {
+    border: none;
+    color: white;
+    background-color: black;
+    width: 100%;
+    height: auto;
+     padding: 15px 32px; 
+     text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+     margin: 4px 2px; 
+     cursor: pointer;
+  }
 
 
 /* h3{
@@ -1157,7 +1197,7 @@ button {
 }
 
 .client_taital_right {
-    width: 60%;
+    width: 40%;
     float: left;
 }
 
@@ -1177,7 +1217,7 @@ button {
 .client_name {
     width: 100%;
     float: left;
-    font-size: 24px;
+    font-size: 18px;
     color: #012628;
     font-weight: bold;
     text-transform: uppercase;
