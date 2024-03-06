@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 550px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+        
+    /* On small screens, set height to 'auto' for the grid */
+    @media screen and (max-width: 767px) {
+      .row.content {height: auto;} 
+    }
+    
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse visible-xs">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">AHARYA ADMIN</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <!-- <li ><a href="dash.html">Dashboard</a></li> -->
+        <li class="active"><a href="Workshops.html">Workshops</a></li>
+        <li ><a href="MajorPerfomance.html">Major-perfomance</a></li>
+        <li ><a href="Upcomimg.html">Upcoming_Events</a></li>
+        <li><a href="#" onclick="logout()">Logout</a></li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav hidden-xs">
+      <h2>AHARYA ADMIN</h2>
+      <ul class="nav nav-pills nav-stacked">
+        <!-- <li ><a href="dash.html">Dashboard</a></li> -->
+        <li class="active"><a href="Workshops.html">Workshops</a></li>
+        <li ><a href="MajorPerfomance.html">Major-perfomance</a></li>
+        <li ><a href="Upcomimg.html">Upcoming_Events</a></li>
+        <li><a href="#" onclick="logout()">Logout</a></li>
+      </ul><br>
+    </div>
+    <br>
+
+    <div class="col-sm-9">
+      <div class="well">
+       
+       
+        
+          <div class="card">
+              <div class="card-body">
+                  <h2 class="card-title">Add Workshop</h2>
+                  <form id="addFestivalForm">
+                      <div class="row">
+                          <div class="col">
+                              <div class="form-group">
+                                  <label for="heading">Heading:</label>
+                                  <input type="text" class="form-control" id="heading" name="heading" required>
+                              </div>
+                          </div>
+                          <div class="col">
+                              <div class="form-group">
+                                  <label for="date">Date:</label>
+                                  <input type="date" class="form-control" id="date" name="date" required>
+                              </div>
+                          </div>
+                          <div class="col">
+                              <div class="form-group">
+                                  <label for="content">Content:</label>
+                                  <textarea class="form-control" id="content" name="content" required></textarea>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col">
+                              <div class="form-group">
+                                  <label for="youtubeLink">Youtube Link:</label>
+                                  <input type="text" class="form-control" id="youtubeLink" name="youtubeLink">
+                              </div>
+                          </div>
+                          <div class="col">
+                              <div class="form-group">
+                                  <label for="image">Image:</label>
+                                  <input type="file" class="form-control-file" id="image" name="image">
+                              </div>
+                          </div>
+                          <div class="col">
+                              <div class="form-group">
+                                  <label for="paymentLink">Payment Link:</label>
+                                  <input type="text" class="form-control" id="paymentLink" name="paymentLink">
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col">
+                              <div class="form-group">
+                                  <label for="status">Status:</label>
+                                  <select class="form-control" id="status" name="status">
+                                      <option value="YES">YES</option>
+                                      <option value="NO">NO</option>
+                                  </select>
+                              </div>
+                          </div>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Add</button>
+                  </form>
+              </div>
+          </div>
+  
+          <div class="card">
+            <div class="card-body">
+                <table class="table" >
+                    <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Heading</th>
+                            <th scope="col">Content</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">YoutubeLink</th>
+                            <th scope="col">PaymentLink</th>
+                            <th scope="col">EDIT</th> <!-- Add this line for the edit button -->
+                            <th scope="col">DELETE</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablebody">
+                         
+                      <!-- Add more rows as needed -->
+                  </tbody>
+                </table>
+            </div>
+        </div>
+
+      </div>
+    </div>
+    
+      
+    
+   
+  </div>
+</div>
+
+<!-- Modal for editing festival -->
+<!-- Modal for editing festival -->
+<div class="modal fade" id="editFestivalModal" tabindex="-1" role="dialog" aria-labelledby="editFestivalModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="editFestivalModalLabel">Edit Festival</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <form id="editFestivalForm">
+                  <div class="form-group">
+                      <label for="editHeading">Heading:</label>
+                      <input type="text" class="form-control" id="editHeading" name="editHeading" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="editDate">Date:</label>
+                      <input type="date" class="form-control" id="editDate" name="editDate" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="editContent">Content:</label>
+                      <textarea class="form-control" id="editContent" name="editContent" required></textarea>
+                  </div>
+                  <div class="form-group">
+                      <label for="editYoutubeLink">Youtube Link:</label>
+                      <input type="text" class="form-control" id="editYoutubeLink" name="editYoutubeLink">
+                  </div>
+                  <div class="form-group">
+                    <label for="image">Image:</label>
+                    <input type="file" class="form-control-file" id="image" name="image">
+                </div>              
+                  <div class="form-group">
+                      <label for="editPaymentLink">Payment Link:</label>
+                      <input type="text" class="form-control" id="editPaymentLink" name="editPaymentLink">
+                  </div>
+                  <div class="form-group">
+                      <label for="editStatus">Status:</label>
+                      <select class="form-control" id="editStatus" name="editStatus">
+                          <option value="YES">YES</option>
+                          <option value="NO">NO</option>
+                      </select>
+                  </div>
+              </form>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" onclick="updateFestival()">Save changes</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+<!-- Include the Firebase SDK (version 8.x) -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+
+
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyCP-hjeoQDXX-85cUlo5RPjZP6u8f13BCY",
+    authDomain: "ahari-90767.firebaseapp.com",
+    projectId: "ahari-90767",
+    storageBucket: "ahari-90767.appspot.com",
+    messagingSenderId: "181694626934",
+    appId: "1:181694626934:web:9c648a8b44d0827c03f357"
+  };
+  
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+
+  function addFestival() {
+    const heading = document.getElementById('heading').value;
+    const date = document.getElementById('date').value;
+    const content = document.getElementById('content').value;
+    const youtubeLink = document.getElementById('youtubeLink').value;
+    const status = document.getElementById('status').value;
+    const paymentLink = document.getElementById('paymentLink').value;
+    const imageFile = document.getElementById('image').files[0]; // Get the selected image file
+
+    const storageRef = firebase.storage().ref();
+    const imageRef = storageRef.child('images/' + imageFile.name); // Set the path for storing the image
+
+    // Upload the image file to storage
+    imageRef.put(imageFile)
+        .then((snapshot) => {
+            return snapshot.ref.getDownloadURL(); // Get the download URL of the uploaded image
+        })
+        .then((imageUrl) => {
+            // Image uploaded successfully, now add festival data to Firestore
+            const festivalData = {
+                Heading: heading,
+                Date: date,
+                Content: content,
+                YoutubeLink: youtubeLink,
+                Status: status,
+                PaymentLink: paymentLink,
+                ImageUrl: imageUrl // Save the image URL to Firestore
+            };
+
+            db.collection('FESTIVALS_COLLECTION').add(festivalData)
+                .then(() => {
+                    console.log('Festival added successfully!');
+                    alert('Festival added successfully!');
+                })
+                .catch((error) => {
+                    console.error('Error adding festival: ', error);
+                    alert('Error adding festival. Please try again later.');
+                });
+        })
+        .catch((error) => {
+            console.error('Error uploading image: ', error);
+            alert('Error uploading image. Please try again later.');
+        });
+}
+
+
+  // Function to open modal for editing festival
+  function editFestival(id) {
+    const festivalRef = db.collection('FESTIVALS_COLLECTION').doc(id);
+    festivalRef.get().then((doc) => {
+        if (doc.exists) {
+            const data = doc.data();
+            // Populate modal form fields with festival data
+            document.getElementById('editHeading').value = data.Heading;
+            document.getElementById('editDate').value = data.Date;
+            document.getElementById('editContent').value = data.Content;
+            document.getElementById('editYoutubeLink').value = data.YoutubeLink;
+            document.getElementById('editPaymentLink').value = data.PaymentLink;
+            document.getElementById('editStatus').value = data.Status;
+            // Set an attribute to store the festival ID
+            document.getElementById('editFestivalForm').setAttribute('data-festival-id', id);
+            // Open edit modal
+            $('#editFestivalModal').modal('show');
+        } else {
+            console.log("No such festival!");
+        }
+    }).catch((error) => {
+        console.log("Error getting festival:", error);
+    });
+}
+
+
+  // Function to update festival data
+  function updateFestival() {
+    const id = document.getElementById('editFestivalForm').getAttribute('data-festival-id');
+    const festivalRef = db.collection('FESTIVALS_COLLECTION').doc(id);
+    const newData = {
+        Heading: document.getElementById('editHeading').value,
+        Date: document.getElementById('editDate').value,
+        Content: document.getElementById('editContent').value,
+        YoutubeLink: document.getElementById('editYoutubeLink').value,
+        PaymentLink: document.getElementById('editPaymentLink').value,
+        Status: document.getElementById('editStatus').value
+        // Add more fields as needed
+    };
+
+    console.log('Updating festival with ID:', id);
+    console.log('New data:', newData);
+
+    // Update festival data in Firestore
+    festivalRef.update(newData)
+        .then(() => {
+            console.log('Festival successfully updated!');
+            alert('Festival successfully updated!');
+            $('#editFestivalModal').modal('hide');
+        })
+        .catch((error) => {
+            console.error('Error updating festival: ', error);
+            alert('Error updating festival. Please try again later.');
+        });
+}
+
+
+
+  // Form Submit Function (You can replace this with your own implementation)
+  document.getElementById("addFestivalForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    addFestival(); // Call addFestival function on form submit
+  });
+
+  // Logout Function (You can replace this with your own implementation)
+  function logout() {
+    console.log("Logout");
+    window.location.href = 'index.html';
+  }
+
+  function fetchData() {
+            const tableBody = document.getElementById('tablebody');
+            db.collection('FESTIVALS_COLLECTION').get()
+            .then(querySnapshot => {
+      
+        if (querySnapshot.empty) {
+            console.log("No documents found");
+        } else {
+            let Id = 1;
+            querySnapshot.forEach(doc => {
+                const data = doc.data();
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+    <td>${Id++}</td>
+    <td>${data.Heading}</td>
+    <td>${data.Content}</td>
+    <td>${data.Date}</td>
+    <td>${data.YoutubeLink}</td>
+    <td>${data.PaymentLink}</td>
+    <td><button onclick="editFestival('${doc.id}')">Edit</button></td> <!-- Add edit button for each festival -->
+    <td><button onclick="deleteStaff('${doc.id}')">Delete</button></td>
+`;
+
+// Set the ID of the row to the document ID
+tr.id = doc.id;
+
+tableBody.appendChild(tr);
+                    });
+                }
+              })
+                .catch(error => {
+                    console.error('Error fetching staff details: ', error);
+                });
+
+              }
+              
+
+
+            function deleteStaff(Id) {
+                console.log('Deleting staff with ID:', Id);
+                
+                // Find the row associated with the staffId and remove it from the table
+                const row = document.getElementById(Id);
+                if (row) {
+                    row.remove(); // Remove the row from the DOM
+                }
+
+                // Delete the staff details from Firestore
+                db.collection('FESTIVALS_COLLECTION').doc(Id).delete()
+                    .then(() => {
+                        console.log('Staff successfully deleted');
+                    })
+                    .catch(error => {
+                        console.error('Error deleting staff:', error);
+                    });
+            }
+
+
+            window.onload = function() {
+              fetchData();
+            };
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+      const adminLoggedIn = sessionStorage.getItem('adminLoggedIn');
+      if (!adminLoggedIn) {
+          window.location.href = 'index.html';
+      }
+  });
+</script>
+
+
+</body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const adminLoggedIn = sessionStorage.getItem('adminLoggedIn');
+        if (!adminLoggedIn) {
+            window.location.href = 'index.html';
+        }
+    });
+</script>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 550px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+        
+    /* On small screens, set height to 'auto' for the grid */
+    @media screen and (max-width: 767px) {
+      .row.content {height: auto;} 
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.4);
+    }
+
+    .modal-content {
+      background-color: #fefefe00;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 60%; /* Adjusted width */
+      max-width: 400px; /* Maximum width */
+      height: auto; /* Adjusted height */
+      max-height: 80%; /* Maximum height */
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      animation-name: modalopen;
+      animation-duration: 0.4s;
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse visible-xs">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="dash.html">Dashboard</a></li>
+        <li><a href="festival.html">Festival</a></li>
+        <li><a href="#" onclick="logout()">Logout</a></li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav hidden-xs">
+      <h2>Logo</h2>
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="dash.html">Dashboard</a></li>
+        <li><a href="festival.html">Festival</a></li>
+        <li><a href="#" onclick="logout()">Logout</a></li>
+      </ul><br>
+    </div>
+    <br>
+
+    <div id="addFestivalModal" class="modal" >
+  
+      <div class="modal-content">
+       
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Add Festival</h2>
+        <form id="addFestivalForm" >
+          <label for="heading">Heading:</label>
+          <input type="text" id="heading" name="heading" required><br>
+          <label for="date">Date:</label>
+          <input type="date" id="date" name="date" required><br>
+          <label for="content">Content:</label>
+          <textarea id="content" name="content" required></textarea><br>
+          <label for="youtubeLink">Youtube Link:</label>
+          <input type="text" id="youtubeLink" name="youtubeLink"><br>
+          <label for="image">Image:</label>
+          <input type="file" id="image" name="image"><br>
+          <label for="paymentLink">Payment Link:</label>
+          <input type="text" id="paymentLink" name="paymentLink"><br>
+          <label for="status">Status:</label>
+          <select id="status" name="status">
+            <option value="YES">YES</option>
+            <option value="NO">NO</option>
+          </select><br>
+          <button type="submit" >Add</button>
+        </form>
+      </div>
+    </div>  
+    
+    <div class="col-sm-9">
+      <div class="well">
+        <h4>Dashboard</h4>
+        <p>Some text..</p>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="well">
+            <h4>Users</h4>
+            <p>1 Million</p> 
+            <button id="addFestivalBtn">Add Festival</button>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="well">
+            <h4>Pages</h4>
+            <p>100 Million</p> 
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="well">
+            <h4>Sessions</h4>
+            <p>10 Million</p> 
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="well">
+            <h4>Bounce</h4>
+            <p>30%</p> 
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="well">
+            <p>Text</p> 
+            <p>Text</p> 
+            <p>Text</p> 
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="well">
+            <p>Text</p> 
+            <p>Text</p> 
+            <p>Text</p> 
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="well">
+            <p>Text</p> 
+            <p>Text</p> 
+            <p>Text</p> 
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-8">
+          <div class="well">
+            <p>Text</p> 
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="well">
+            <p>Text</p> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Include the Firebase SDK (version 8.x) -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyCP-hjeoQDXX-85cUlo5RPjZP6u8f13BCY",
+    authDomain: "ahari-90767.firebaseapp.com",
+    projectId: "ahari-90767",
+    storageBucket: "ahari-90767.appspot.com",
+    messagingSenderId: "181694626934",
+    appId: "1:181694626934:web:9c648a8b44d0827c03f357"
+  };
+  
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+
+  function addFestival() {
+    const heading = document.getElementById('heading').value;
+    const date = document.getElementById('date').value;
+    const content = document.getElementById('content').value;
+    const youtubeLink = document.getElementById('youtubeLink').value;
+    const status = document.getElementById('status').value;
+    // Add more fields as needed
+
+    const festivalData = {
+      Heading: heading,
+      Date: date,
+      Content: content,
+      YoutubeLink: youtubeLink,
+      Status: status,
+      // Add more fields as needed
+    };
+
+    db.collection('FESTIVALS_COLLECTION').add(festivalData)
+      .then(() => {
+        console.log('Festival added successfully!');
+        alert('Festival added successfully!');
+      })
+      .catch((error) => {
+        console.error('Error adding festival: ', error);
+        alert('Error adding festival. Please try again later.');
+      });
+  }
+
+
+  // Open Modal Function
+  document.getElementById("addFestivalBtn").addEventListener("click", function() {
+    document.getElementById("addFestivalModal").style.display = "block";
+  });
+
+  // Close Modal Function
+  function closeModal() {
+    document.getElementById("addFestivalModal").style.display = "none";
+  }
+
+  // Form Submit Function (You can replace this with your own implementation)
+  document.getElementById("addFestivalForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    addFestival(); // Call addFestival function on form submit
+  });
+
+  // Logout Function (You can replace this with your own implementation)
+  function logout() {
+    console.log("Logout");
+    window.location.href = 'index.html';
+  }
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const adminLoggedIn = sessionStorage.getItem('adminLoggedIn');
+        if (!adminLoggedIn) {
+            window.location.href = 'index.html';
+        }
+    });
+</script>
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
