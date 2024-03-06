@@ -803,7 +803,7 @@ button {
     position: relative;
 }
 
-.menu_main {
+/* .menu_main {
     -ms-flex-direction: column;
     flex-direction: column;
     padding-left: 0;
@@ -843,8 +843,76 @@ button {
 .menu_main li a:hover {
     color: #ffffff;
     background-color: #2b2278;
-}
+} */
 
+.menu_main {
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+ }
+ 
+ .menu_main ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    display: inline-flex;
+ }
+ 
+ .menu_main li {
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #fff;
+    border-radius: 40px;
+    position: relative;
+ }
+ 
+ .menu_main li.has-dropdown:hover .dropdown {
+    display: block;
+ }
+ 
+ .menu_main li a {
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: block;
+ }
+ 
+ .menu_main li a:hover {
+    color: #ffffff;
+    background-color: #2b2278;
+ }
+ 
+ .menu_main .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #2b2278;
+    border-radius: 10px;
+    padding: 10px 0;
+    width: 100%;
+ }
+ 
+ .menu_main .dropdown li {
+    float: none;
+    width: 100%;
+    text-align: left;
+ }
+ 
+ .menu_main .dropdown li a {
+    padding: 10px 20px;
+ }
+ 
 .mb-lg-0,
 .my-lg-0 {
     margin-bottom: 0!important;
@@ -1045,6 +1113,7 @@ button {
 .readmore_bt a:hover {
     color: #ffffff;
     background-color: #2b2278;
+    
 }
 
 .about_img {
@@ -1078,6 +1147,15 @@ button {
     color: #ffffff;
     font-weight: bold;
     padding-top: 30px;
+    text-align: center;
+}
+.blog_taital1 {
+    width: 100%;
+    float: left;
+    font-size: 40px;
+    color: #ffffff;
+    font-weight: bold;
+    padding-top: 0px;
     text-align: center;
 }
 
