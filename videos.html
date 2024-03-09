@@ -33,6 +33,19 @@
       <link rel="stylesheet" href="css/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
    </head>
+    <style>
+     
+/* Hide dropdown by default */
+.dropdown1 {
+    display: none;
+}
+
+/* Show dropdown when it's active */
+.dropdown1.active {
+    display: block;
+}
+
+</style>
    <body>
       <!-- header section start -->
      <div class="header_section"> 
@@ -79,13 +92,13 @@
                <div class="menu_main">
                   <ul>
                      <li class="active"><a href="index.html">Home</a></li>
-                     <li id="menu-products" class="has-dropdown"><a href="#">Festival</a>
+                    <li id="menu-products" class="has-dropdown">
+                        <a href="#" class="toggle-dropdown">Festival</a>
                         <ul class="dropdown">
-                           <li><a href="Festival24.html">2024</a></li>
-                           <li><a href="Festival23.html">2023</a></li>
-                          
+                            <li><a href="Festival24.html">2024</a></li>
+                            <li><a href="Festival23.html">2023</a></li>
                         </ul>
-                     </li>
+                    </li>
                      <li><a href="about.html">About</a></li>
                      <li><a href="services.html">Services</a></li>
                      <li><a href="videos.html">Videos</a></li>
@@ -226,6 +239,20 @@
       <!-- javascript --> 
       <script src="js/owl.carousel.js"></script>
       <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>  
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    var dropdownToggle = document.getElementById('dropdown-toggle');
+    var dropdownMenu = document.getElementById('dropdown-menu');
+
+    dropdownToggle.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent default link behavior
+        dropdownMenu.classList.toggle('active'); // Toggle the active class on the dropdown menu
+    });
+    });
+
+
+      </script>
      
    </body>
 </html>
