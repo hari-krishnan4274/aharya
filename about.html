@@ -32,6 +32,18 @@
       <link rel="stylesheet" href="css/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
    </head>
+    <style>
+     
+/* Hide dropdown by default */
+.dropdown1 {
+    display: none;
+}
+
+/* Show dropdown when it's active */
+.dropdown1.active {
+    display: block;
+}
+  </style>
    <body>
       <!-- header section start -->
       <div class="header_section">
@@ -54,10 +66,13 @@
                            <a class="nav-link" href="services.html">Services</a>   
                   
                         </li>
-                          <li class="nav-item">
-                           <a class="nav-link" href="Festival.html">Festival</a>   
-                  
-                        </li>
+                         <li class="nav-item has-dropdown">
+                           <a class="nav-link" href="#" id="dropdown-toggle">Festival</a>
+                           <ul class="dropdown1" id="dropdown-menu">
+                               <li><a href="Festival24.html">2024</a></li>
+                               <li><a href="Festival23.html">2023</a></li>
+                           </ul>
+                       </li>
                         <li class="nav-item">
                            <a class="nav-link" href="gallery.html">Gallery</a>   
                   
@@ -153,6 +168,19 @@
       <script src="js/custom.js"></script>
       <!-- javascript --> 
       <script src="js/owl.carousel.js"></script>
-      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>    
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>   
+            <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    var dropdownToggle = document.getElementById('dropdown-toggle');
+    var dropdownMenu = document.getElementById('dropdown-menu');
+
+    dropdownToggle.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent default link behavior
+        dropdownMenu.classList.toggle('active'); // Toggle the active class on the dropdown menu
+    });
+    });
+
+
+      </script>
    </body>
 </html>
