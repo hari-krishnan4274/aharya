@@ -941,14 +941,12 @@ button {
 }
 
 .banner_taital {
-    width: 80%;
+    width: 100%;
     float: left;
-    font-size: 40px;
+    font-size: 16px;
     color: #ffffff;
-    font-weight: bold;
-    text-align: center;
-    text-transform: uppercase;
-    font-family: 'Righteous', Regular;
+    margin: 0px;
+    padding-top: 40px;
 }
 
 .banner_text {
