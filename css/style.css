@@ -765,6 +765,7 @@ button {
 }
 
 .logo_mobile {
+  
     width: 100%;
     float: left;
     text-align: center;
@@ -940,9 +941,9 @@ button {
 }
 
 .banner_taital {
-    width: 90%;
+    width: 40%;
     float: left;
-    font-size: 60px;
+    font-size: 40px;
     color: #ffffff;
     font-weight: bold;
     text-align: center;
