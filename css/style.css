@@ -1,4 +1,4 @@
-   /*--------------------------------------------------------------------- File Name: style.css ---------------------------------------------------------------------*/
+  /*--------------------------------------------------------------------- File Name: style.css ---------------------------------------------------------------------*/
 
 
 /*--------------------------------------------------------------------- import Fonts ---------------------------------------------------------------------*/
@@ -765,7 +765,6 @@ button {
 }
 
 .logo_mobile {
-  
     width: 100%;
     float: left;
     text-align: center;
@@ -940,6 +939,14 @@ button {
     padding-bottom: 305px;
 }
 
+.banner_taital {
+    width: 100%;
+    font-size: 40px;
+    color: #ffffff;
+    font-weight: bold;
+    padding-top: 30px;;
+}
+
 .normal_tatial {
     width: 100%;
     font-size: 40px;
@@ -948,6 +955,12 @@ button {
     padding-top: 220px;
 }
 
+/* Adjustments for mobile devices */
+@media only screen and (max-width: 600px) {
+    .banner_taital {
+        font-size: 1px; /* Adjust the font size as needed */
+    }
+}
 
 .banner_text {
     width: 63%;
