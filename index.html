@@ -317,6 +317,10 @@
          <div class="mobile_menu">
             <nav class="navbar navbar-expand-lg">
                <div class="logo_mobile"><a href="index.html"><img src="images/logo.png"></a></div>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+               </button>
                <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav">
                      <li class="nav-item">
@@ -367,11 +371,6 @@
                      <div class="title-sub">Centre for Performing Arts</div>
                   </div>
                </div>
-
-               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-               </button>
 
                <div class="reg-text">
                   Kerala Sangeetha Nataka Academy<br>
@@ -759,19 +758,31 @@
    <!-- javascript -->
    <script src="js/owl.carousel.js"></script>
    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+  
+
    <script>
       document.addEventListener('DOMContentLoaded', function () {
+         // Festival Dropdown Toggle
          var dropdownToggle = document.getElementById('dropdown-toggle');
          var dropdownMenu = document.getElementById('dropdown-menu');
+         if (dropdownToggle && dropdownMenu) {
+            dropdownToggle.addEventListener('click', function (e) {
+               e.preventDefault();
+               dropdownMenu.classList.toggle('active');
+            });
+         }
 
-         dropdownToggle.addEventListener('click', function (e) {
-            e.preventDefault(); // Prevent default link behavior
-            dropdownMenu.classList.toggle('active'); // Toggle the active class on the dropdown menu
-         });
+         // Mobile Menu Toggler Fallback
+         var navbarToggler = document.querySelector('.navbar-toggler');
+         var navbarCollapse = document.getElementById('navbarNav');
+         if (navbarToggler && navbarCollapse) {
+            navbarToggler.addEventListener('click', function () {
+               navbarCollapse.classList.toggle('show');
+            });
+         }
       });
-
-
    </script>
+
 </body>
 
 

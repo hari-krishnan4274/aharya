@@ -337,10 +337,6 @@
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
-    .navbar-light .navbar-toggler {
-        color: rgba(0, 0, 0, .5);
-        border-color: transparent;
-    }
 
     #main_slider a.carousel-control-prev {
         position: absolute;
@@ -362,9 +358,6 @@
         padding: 0px;
     }
 
-    .navbar-toggler {
-        background-color: #ffffff;
-    }
 
     .logo {
         display: none;
@@ -374,11 +367,6 @@
         display: none;
     }
 
-    .logo_mobile {
-        width: 40%;
-        padding: 0px;
-        text-align: left;
-    }
 
     .mobile_menu {
         display: initial;
@@ -586,10 +574,6 @@
 }
 
 @media (max-width: 575px) {
-    .navbar-light .navbar-toggler {
-        color: rgba(0, 0, 0, .5);
-        border-color: transparent;
-    }
 
     #main_slider a.carousel-control-prev {
         position: absolute;
@@ -611,9 +595,6 @@
         padding: 0px;
     }
 
-    .navbar-toggler {
-        background-color: #ffffff;
-    }
 
     .logo {
         display: none;
@@ -623,10 +604,6 @@
         display: none;
     }
 
-    .logo_mobile {
-        width: 40%;
-        padding: 0px;
-    }
 
     .mobile_menu {
         display: initial;
@@ -885,26 +862,6 @@
         position: static !important;
     }
 
-    .navbar-toggler {
-        position: absolute !important;
-        top: 15px !important;
-        right: 15px !important;
-        z-index: 9999 !important;
-        background-color: #2b2278 !important;
-        border: 2px solid #ffffff !important;
-        padding: 5px !important;
-        display: block !important;
-        border-radius: 5px;
-    }
 
-    .navbar-toggler-icon {
-        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
-        width: 30px;
-        height: 30px;
-        display: inline-block;
-    }
 
-    .logo_mobile {
-        display: none !important;
-    }
 }

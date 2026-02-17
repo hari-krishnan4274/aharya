@@ -321,6 +321,30 @@
             });
         });
     </script>
+
+   <script>
+      document.addEventListener('DOMContentLoaded', function () {
+         // Festival Dropdown Toggle
+         var dropdownToggle = document.getElementById('dropdown-toggle');
+         var dropdownMenu = document.getElementById('dropdown-menu');
+         if (dropdownToggle && dropdownMenu) {
+            dropdownToggle.addEventListener('click', function (e) {
+               e.preventDefault();
+               dropdownMenu.classList.toggle('active');
+            });
+         }
+
+         // Mobile Menu Toggler Fallback
+         var navbarToggler = document.querySelector('.navbar-toggler');
+         var navbarCollapse = document.getElementById('navbarNav');
+         if (navbarToggler && navbarCollapse) {
+            navbarToggler.addEventListener('click', function () {
+               navbarCollapse.classList.toggle('show');
+            });
+         }
+      });
+   </script>
+
 </body>
 
 </html>
