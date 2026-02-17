@@ -1,293 +1,328 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <!-- basic -->
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!-- mobile metas -->
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-      <!-- site metas -->
-      <title>Festival</title>
-      <meta name="keywords" content="">
-      <meta name="description" content="">
-      <meta name="author" content="">
-      <!-- bootstrap css -->
-      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-      <!-- style css -->
-      <link rel="stylesheet" type="text/css" href="css/style.css">
-      <!-- Responsive-->
-      <link rel="stylesheet" href="css/responsive.css">
-      <!-- fevicon -->
-      <link rel="icon" href="images/fevicon.png" type="image/gif" />
-      <!-- Scrollbar Custom CSS -->
-      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
-      <!-- Tweaks for older IEs-->
-      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-      <!-- fonts -->
-      <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Righteous&display=swap" rel="stylesheet">
-      <!-- owl stylesheets --> 
-      <link rel="stylesheet" href="css/owl.carousel.min.css">
-      <link rel="stylesheet" href="css/owl.theme.default.min.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-   </head>
+
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Aharya Festival 2023 - Memories</title>
+   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+   <link rel="stylesheet" type="text/css" href="css/style.css">
+   <link rel="stylesheet" href="css/responsive.css">
+   <link rel="icon" href="images/favcon.png" type="image/gif" />
+   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+   <link href="https://fonts.googleapis.com/css?family=Poppins:400,700,800,900|Outfit:300,400,500,600,700&display=swap"
+      rel="stylesheet">
    <style>
-     
-/* Hide dropdown by default */
-.dropdown1 {
-    display: none;
-}
+      .fest-23-hero {
+         background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(12, 12, 14, 1)), url('images/festimg4.jpeg');
+         background-size: cover;
+         background-position: center;
+      }
 
-/* Show dropdown when it's active */
-.dropdown1.active {
-    display: block;
-}
-  </style>
-   <body style="background-color: gold;">
-      
-      <!-- header section start -->
-      <div class="header_section">
-         <div class="header_main">
-            <div class="mobile_menu">
-               <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                  <div class="logo_mobile"><a href="index.html"><img src="images/logo.png"></a></div>
-                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      .fest-23-hero h1 {
+         letter-spacing: -2px;
+         margin-bottom: 30px;
+      }
+
+      .fest-23-hero p {
+         color: #d4af37;
+         font-weight: 600;
+         letter-spacing: 5px;
+         text-transform: uppercase;
+         margin-bottom: 0;
+         margin-top: 10px;
+      }
+
+      .memory-section {
+         padding: 100px 0;
+         background-color: #0c0c0e;
+         color: #fff;
+      }
+
+      .memory-card {
+         background: #16161a;
+         border-radius: 20px;
+         overflow: hidden;
+         margin-bottom: 30px;
+         border: 1px solid #28282e;
+         transition: transform 0.3s ease;
+      }
+
+      .memory-card:hover {
+         transform: translateY(-10px);
+         border-color: #d4af37;
+      }
+
+      .memory-img {
+         width: 100%;
+         height: 300px;
+         object-fit: cover;
+         cursor: pointer;
+      }
+
+      .memory-info {
+         padding: 30px;
+      }
+
+      .memory-info h3 {
+         color: #d4af37;
+         font-size: 24px;
+         margin-bottom: 15px;
+      }
+
+      .memory-info p {
+         color: #bbb;
+         font-size: 16px;
+         line-height: 1.6;
+      }
+
+      .stats-highlight {
+         background: #d4af37;
+         color: #000;
+         padding: 60px 0;
+         margin: 50px 0;
+      }
+
+      .stat-item h2 {
+         font-size: 48px;
+         font-weight: 800;
+         margin: 0;
+      }
+
+      .stat-item p {
+         font-size: 18px;
+         font-weight: 600;
+         text-transform: uppercase;
+         margin: 0;
+      }
+   </style>
+</head>
+
+<body class="festival-2023-page" style="background-color: #0c0c0e;">
+
+   <!-- header section start -->
+   <div class="header_section">
+      <div class="header_main">
+         <div class="mobile_menu">
+            <nav class="navbar navbar-expand-lg">
+               <div class="logo_mobile"><a href="index.html"><img src="images/logo.png"></a></div>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarNav">
-                     <ul class="navbar-nav">
-                        <li class="nav-item">
-                           <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                           <a class="nav-link" href="about.html">About</a>
-                        </li>
-                        <li class="nav-item">
-                           <a class="nav-link" href="services.html">Services</a>   
-                  
-                        </li>
-                          <li class="nav-item has-dropdown">
-                           <a class="nav-link" href="#" id="dropdown-toggle">Festival</a>
-                           <ul class="dropdown1" id="dropdown-menu">
-                               <li><a href="Festival24.html">2024</a></li>
-                               <li><a href="Festival23.html">2023</a></li>
-                           </ul>
-                       </li>
-                        <li class="nav-item">
-                           <a class="nav-link" href="gallery.html">Gallery</a>   
-                  
-                        </li>
-                        <li class="nav-item">
-                           <a class="nav-link" href="videos.html">Videos</a>   
-                  
-                        </li>
-                       
-                        <li class="nav-item">
-                           <a class="nav-link " href="contact.html">Contact</a>
-                        </li>
-                     </ul>
-                  </div>
-               </nav>
-            </div>
-            <div class="container-fluid">
-
-               <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
-               <div class="menu_main">
-                  <ul>
-                     <li class="active"><a href="index.html">Home</a></li>
-                     <li id="menu-products" class="has-dropdown"><a href="#">Festival</a>
-                        <ul class="dropdown">
-                           <li><a href="Festival23.html">2023</a></li>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                     <li class="nav-item has-dropdown">
+                        <a class="nav-link" href="#" id="dropdown-toggle">Festival</a>
+                        <ul class="dropdown1" id="dropdown-menu">
+                           <li><a href="Festival26.html">2026</a></li>
+                           <li><a href="Festival25.html">2025</a></li>
                            <li><a href="Festival24.html">2024</a></li>
-                          
+                           <li><a href="Festival23.html">2023</a></li>
                         </ul>
                      </li>
-                     <li><a href="about.html">About</a></li>
-                     <li><a href="services.html">Services</a></li>
-                     <li><a href="gallery.html">Gallery</a></li>
-                     <li><a href="videos.html">Videos</a></li>
-                     <li><a href="contact.html">Contact us</a></li>
+                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                     <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                     <li class="nav-item"><a class="nav-link " href="contact.html">Contact</a></li>
                   </ul>
                </div>
+            </nav>
          </div>
-         </div>
-      </div>
-      <!-- header section end -->
-      <!-- about section start -->
-     
-
-   <h1 class="about_taital"></h1>
-   <h2><b> </b></h2>
-   
-   <div class="about_section layout_padding">
-      <div class="container-fluid">
-         <div class="row">
-            <div class="col-md-6">
-               <div class="about_taital_main">
-                  <h1 class="about_taital">Aharya Festival 2023</h1>
-                  <h2 style="color: black;" >TEAM AHARYA CENTRE FOR PERFORMING ARTS IN ASSOCIATION WITH DEPARTMENT OF BHARATHANATYAM SREE SANKARACHARYA UNIVERSITY OF SANSKRIT </h2>
-               <p style="color: black;">
-                  <b>MAY 11- MAY 14 2023</b><br>
-                  RESEDENTIAL BHARATANATYAM AND NATTUVANGAM WORKSHOP 
-                  At koothambalam SSUS Kalady</p>
-                  <div class="readmore_bt"><a href="https://docs.google.com/forms/d/e/1FAIpQLSd8fW4lfMuH-z0wOyn1gFhLhBrwjiOsgDzMUZE5t24lzpUCdQ/viewform?usp=sf_link">Book Slots Now</a></div>
+         <div class="container-fluid header-top-wrapper">
+            <div class="header-top">
+               <div class="logo">
+                  <a href="index.html">
+                     <img src="images/logo.png" alt="Aharya Logo">
+                  </a>
+                  <div class="logo-text-container">
+                     <div class="title-main">Team Aharya</div>
+                     <div class="title-sub">Centre for Performing Arts</div>
+                  </div>
+               </div>
+               <div class="reg-text">
+                  Kerala Sangeetha Nataka Academy<br>
+                  Reg No:381/EKM/2023, EKM/TC/79/2023
                </div>
             </div>
-            <div class="col-md-6 padding_right_0">
-               <iframe src="https://www.youtube.com/embed/XZOCsqz5Aqg?autoplay=1&fs=0" width="400" height="315" title="AHARYA NATIONAL DANCE FESTIVAL 2K23" frameborder="0"></iframe>
-            </div>
-         </div>
-      </div>
-   </div>
-
-   <div class="about_section layout_padding">
-      <div class="container-fluid">
-         <div class="row">
-            <div class="col-md-6">
-               <div class="about_taital_main">
-                  <h3 style="color: black; font-size: 30px;"><u> Day1 (11/05/2023)</u></h3>
-                  <h2 style="color: black; font-size: 25px;">One nritya piece (ayyapa kavutuvam) will be taught by sri.Madhurai R Muralidharan <br>
-                     Original audio track will be provided <br>
-                      bharathanatyam recital by dr. Shankar kandasamy at 7:30 pm.</h2>
-                      <div class="readmore_bt"><a href="https://docs.google.com/forms/d/e/1FAIpQLSd8fW4lfMuH-z0wOyn1gFhLhBrwjiOsgDzMUZE5t24lzpUCdQ/viewform?usp=sf_link">Book Slots Now</a></div>
-
-               </div>
-            </div>
-            <div class="col-md-6 padding_right_0">
-               <div><img src="images/festimg3.jpeg" class="about_img"></div>          
-              </div>
-         </div>
-      </div>
-   </div>
-   <div class="about_section layout_padding">
-      <div class="container-fluid">
-         <div class="row">
-            <div class="col-md-6">
-               <div class="about_taital_main">
-                  <h3 style="color: black; font-size: 30px;"><u> DAY 2  (12.05.2023)</u></h3>
-                  <h2 style="color: black; font-size: 20px;">One nrithya piece (samskriti vandana part 1) will be taught by sri.Shankar Kandasamy<br> 
-                     One nrita (madhuvanti thillana) will be taught by sri.Madhurai R Muralidharan <br>
-                     Original audio track will be provided by
-                     Ks balakrishnan will be conducting a nattuvangam basic level course <br>
-                     Chithrapadaravanam <br>
-                     -"An Artistic Depiction of Life's Intricacies through Seetha – Ravana at 07.30 PM</h2>
-                     <div class="readmore_bt"><a href="https://docs.google.com/forms/d/e/1FAIpQLSd8fW4lfMuH-z0wOyn1gFhLhBrwjiOsgDzMUZE5t24lzpUCdQ/viewform?usp=sf_link">Book Slots Now</a></div>
-
-               </div>
-            </div>
-            <div class="col-md-6 padding_right_0">
-               <div><img src="images/festimg4.jpeg" class="about_img"></div>          
-              </div>
-         </div>
-      </div>
-   </div>
-
-   <div class="about_section layout_padding">
-      <div class="container-fluid">
-         <div class="row">
-            <div class="col-md-6">
-               <div class="about_taital_main">
-                  <h3 style="color: black; font-size: 30px;"><u> DAY 3  (13.05.2023)</u></h3>
-                  <h2 style="color: black; font-size: 20px">One nrithya piece (samskriti vandana part 2) will be taught by sri.Shankar Kandasamy<br>
-                     K.S Balakrishnan will be conducting a nattuvangam advance level course<br>
-                     Dr. Janaki Rangarajan will be performing a bharathanatyam margam at 7:30 pm</h2>
-                     <div class="readmore_bt"><a href="https://docs.google.com/forms/d/e/1FAIpQLSd8fW4lfMuH-z0wOyn1gFhLhBrwjiOsgDzMUZE5t24lzpUCdQ/viewform?usp=sf_link">Book Slots Now</a></div>
-
-               </div>
-            </div>
-            <div class="col-md-6 padding_right_0">
-               <div><img src="images/festimg2.jpeg" class="about_img"></div>          
-              </div>
-         </div>
-      </div>
-   </div>
-
-   <div class="about_section layout_padding">
-      <div class="container-fluid">
-         <div class="row">
-            <div class="col-md-6">
-               <div class="about_taital_main">
-                  <h3 style="color: black; font-size: 30px;"><u> DAY 4  (14.05.2023)</u></h3>
-                  <h2 style="color: black; font-size: 20px">Chaari and karanaas session by dr. Janaki Rangarajan<br>
-                     Punyah dance company will be presenting a bharatanatyam production "abha - retelling of the ramayana" <br>
-                     featuring parshwanath upadhye, sruthi gopal, and adithya pv at 7:30 pm!</h2>
-                     <div class="readmore_bt"><a href="https://docs.google.com/forms/d/e/1FAIpQLSd8fW4lfMuH-z0wOyn1gFhLhBrwjiOsgDzMUZE5t24lzpUCdQ/viewform?usp=sf_link">Book Slots Now</a></div>
-
-               </div>
-            </div>
-            <div class="col-md-6 padding_right_0">
-               <div><img src="images/festimg1.jpeg" class="about_img"></div>          
-              </div>
-         </div>
-      </div>
-   </div>
-      <!-- about section end -->
-      <!-- footer section start -->
-      <div class="footer_section layout_padding">
-         <div class="container">
-           
-            <div class="location_main">
-               <h1>Aharya</h1>
-               <div class="call_text"><img src="images/call-icon.png"></div>
-               <div class="call_text"><a href="tel:+91 8281934233">Call +91 8281934233</a></div>
-               <div class="call_text"><img src="images/mail-icon.png"></div>
-               <div class="call_text"><a href="mailto:teamaharyaa@gmail.com">teamaharyaa@gmail.com</a></div>
-            </div>
-            <div class="social_icon">
+            <div class="menu_main">
                <ul>
-                  <li><a href="https://www.facebook.com/teamaharya/"><img src="images/fb-icon.png"></a></li>
-                  <li><a href="https://www.linkedin.com/in/team-aharya-27626526b/?originalSubdomain=in"><img src="images/linkedin-icon.png"></a></li>
-                  <li><a href="https://www.instagram.com/team.aharya/?igshid=YmMyMTA2M2Y%3D"><img src="images/instagram-icon.png"></a></li>
+                  <li><a href="index.html">Home</a></li>
+                  <li id="menu-products" class="has-dropdown active">
+                     <a href="#" class="toggle-dropdown">Festival</a>
+                     <ul class="dropdown">
+                        <li><a href="Festival26.html">2026</a></li>
+                        <li><a href="Festival25.html">2025</a></li>
+                        <li><a href="Festival24.html">2024</a></li>
+                        <li><a href="Festival23.html">2023</a></li>
+                     </ul>
+                  </li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="services.html">Services</a></li>
+                  <li><a href="gallery.html">Gallery</a></li>
+                  <li><a href="videos.html">Videos</a></li>
+                  <li><a href="contact.html">Contact us</a></li>
                </ul>
             </div>
          </div>
       </div>
-      <!-- footer section end -->
-      <!-- copyright section start -->
-      <div class="copyright_section">
-         <div class="container">
-            <p class="copyright_text">2022 All Rights Reserved. Design by BIGHEADS CREATIVE TECH PVT. LTD</a></p>
+   </div>
+
+   <!-- Hero Section -->
+   <div class="fest-hero fest-23-hero">
+      <p>Legacy of Excellence</p>
+      <h1>Festival 2K23</h1>
+      <div style="margin-top: 20px;">
+         <span style="color: #d4af37; font-size: 18px; letter-spacing: 2px;">MAY 11 - 14, 2023 | KALADY, KERALA</span>
+      </div>
+   </div>
+
+   <!-- Stats Section -->
+   <div class="stats-highlight text-center">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-3 stat-item">
+               <h2>SSUS</h2>
+               <p>Venue</p>
+            </div>
+            <div class="col-md-3 stat-item">
+               <h2>4 Days</h2>
+               <p>Intensive</p>
+            </div>
+            <div class="col-md-3 stat-item">
+               <h2>5+</h2>
+               <p>Gurus</p>
+            </div>
+            <div class="col-md-3 stat-item">
+               <h2>100%</h2>
+               <p>Residential</p>
+            </div>
          </div>
       </div>
-      <script>
-         const firebaseConfig = {
-           apiKey: "AIzaSyCP-hjeoQDXX-85cUlo5RPjZP6u8f13BCY",
-           authDomain: "ahari-90767.firebaseapp.com",
-           projectId: "ahari-90767",
-           storageBucket: "ahari-90767.appspot.com",
-           messagingSenderId: "181694626934",
-           appId: "1:181694626934:web:9c648a8b44d0827c03f357"
-         };
-         
-         firebase.initializeApp(firebaseConfig);
-         const db = firebase.firestore();
-      </script>
-      <!-- copyright section end -->
-      <!-- Javascript files-->
-      <script src="js/jquery.min.js"></script>
-      <script src="js/popper.min.js"></script>
-      <script src="js/bootstrap.bundle.min.js"></script>
-      <script src="js/jquery-3.0.0.min.js"></script>
-      <script src="js/plugin.js"></script>
-      <!-- sidebar -->
-      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-      <script src="js/custom.js"></script>
-      <!-- javascript --> 
-      <script src="js/owl.carousel.js"></script>
-      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>  
-           <script>
-        document.addEventListener('DOMContentLoaded', function() {
-    var dropdownToggle = document.getElementById('dropdown-toggle');
-    var dropdownMenu = document.getElementById('dropdown-menu');
+   </div>
 
-    dropdownToggle.addEventListener('click', function(e) {
-        e.preventDefault(); // Prevent default link behavior
-        dropdownMenu.classList.toggle('active'); // Toggle the active class on the dropdown menu
-    });
-    });
+   <!-- Memory Grid Section -->
+   <div class="memory-section">
+      <div class="container">
+         <div class="text-center mb-5">
+            <h2 style="font-weight: 800; font-size: 42px; color: #d4af37;">HIGHLIGHTS OF 2023</h2>
+            <div style="height: 3px; width: 80px; background: #d4af37; margin: 20px auto;"></div>
+         </div>
+         <div class="row">
+            <!-- Day 1 -->
+            <div class="col-md-6">
+               <div class="memory-card">
+                  <img src="images/festimg3.jpeg" class="memory-img" alt="Day 1 Workshop">
+                  <div class="memory-info">
+                     <h3>The Beginning: Day 1</h3>
+                     <p>Nritya sessions by Sri Madhurai R Muralidharan featuring Ayyappa Kavutuvam, followed by a
+                        masterful recital by Dr. Shankar Kandasamy.</p>
+                  </div>
+               </div>
+            </div>
+            <!-- Day 2 -->
+            <div class="col-md-6">
+               <div class="memory-card">
+                  <img src="images/festimg4.jpeg" class="memory-img" alt="Day 2 Highlights">
+                  <div class="memory-info">
+                     <h3>Rhythm & Grace: Day 2</h3>
+                     <p>Intensive workshop covering Samskriti Vandana and Thillanas. Featuring Chithrapadaravanam – an
+                        artistic depiction of Seetha-Ravana.</p>
+                  </div>
+               </div>
+            </div>
+            <!-- Day 3 -->
+            <div class="col-md-6">
+               <div class="memory-card">
+                  <img src="images/festimg2.jpeg" class="memory-img" alt="Day 3 Workshop">
+                  <div class="memory-info">
+                     <h3>Mastery in Motion: Day 3</h3>
+                     <p>Advanced Nattuvangam course by K.S Balakrishnan and a brilliant Bharathanatyam Margam
+                        performance by Dr. Janaki Rangarajan.</p>
+                  </div>
+               </div>
+            </div>
+            <!-- Day 4 -->
+            <div class="col-md-6">
+               <div class="memory-card">
+                  <img src="images/festimg1.jpeg" class="memory-img" alt="Day 4 Grand Finale">
+                  <div class="memory-info">
+                     <h3>Grand Finale: Day 4</h3>
+                     <p>Chaari & Karanaas session, concluding with Punyah Dance Company’s "Abha" performance featuring
+                        Parshwanath Upadhye.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
 
+   <!-- Video Highlight Section -->
+   <div class="details-section text-center"
+      style="padding: 80px 0; background-color: #0c0c0e; border-top: 1px solid #28282e;">
+      <div class="container">
+         <h2 style="font-weight: 700; margin-bottom: 40px; color: #d4af37;">RECOLLECTING THE VIBES</h2>
+         <div class="row justify-content-center">
+            <div class="col-md-10">
+               <div
+                  style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 20px; border: 2px solid #28282e;">
+                  <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                     src="https://www.youtube.com/embed/XZOCsqz5Aqg" title="AHARYA NATIONAL DANCE FESTIVAL 2K23"
+                     frameborder="0" allowfullscreen></iframe>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
 
-      </script>
-   </body>
+   <!-- Image Viewer Modal -->
+   <div id="image-viewer" class="image-viewer-modal">
+      <span class="close-viewer">&times;</span>
+      <img class="image-viewer-content" id="full-image" src="" alt="Full View">
+   </div>
+
+   <!-- Footer -->
+   <div class="footer_section layout_padding">
+      <div class="container text-center">
+         <h1 style="color: #fff; margin-bottom: 30px;">Aharya School of Classical Dance</h1>
+         <div class="social_icon">
+            <ul>
+               <li><a href="https://www.facebook.com/teamaharya/"><i class="fa fa-facebook"></i></a></li>
+               <li><a href="https://www.instagram.com/team.aharya/"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+
+   <script src="js/jquery.min.js"></script>
+   <script src="js/bootstrap.bundle.min.js"></script>
+   <script>
+      $(document).ready(function () {
+         $('#dropdown-toggle').click(function (e) {
+            e.preventDefault();
+            $('#dropdown-menu').toggleClass('active');
+         });
+
+         $('.memory-img').on('click', function () {
+            var src = $(this).attr('src');
+            $('#full-image').attr('src', src);
+            $('#image-viewer').addClass('active').css('display', 'flex');
+            $('body').css('overflow', 'hidden');
+         });
+
+         $('.close-viewer, #image-viewer').on('click', function () {
+            $('#image-viewer').removeClass('active').fadeOut(300, function () {
+               $(this).css('display', 'none');
+            });
+            $('body').css('overflow', 'auto');
+         });
+
+         $('#full-image').on('click', function (e) {
+            e.stopPropagation();
+         });
+      });
+   </script>
+</body>
+
 </html>

@@ -1,201 +1,319 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <!-- basic -->
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!-- mobile metas -->
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-      <!-- site metas -->
-      <title>Services</title>
-      <meta name="keywords" content="">
-      <meta name="description" content="">
-      <meta name="author" content="">
-      <!-- bootstrap css -->
-      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-      <!-- style css -->
-      <link rel="stylesheet" type="text/css" href="css/style.css">
-      <!-- Responsive-->
-      <link rel="stylesheet" href="css/responsive.css">
-      <!-- fevicon -->
-      <link rel="icon" href="images/fevicon.png" type="image/gif" />
-      <!-- Scrollbar Custom CSS -->
-      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
-      <!-- Tweaks for older IEs-->
-      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-      <!-- fonts -->
-      <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Righteous&display=swap" rel="stylesheet">
-      <!-- owl stylesheets --> 
-      <link rel="stylesheet" href="css/owl.carousel.min.css">
-      <link rel="stylesheet" href="css/owl.theme.default.min.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-   </head>
-   <style>
-     
-/* Hide dropdown by default */
-.dropdown1 {
-    display: none;
-}
 
-/* Show dropdown when it's active */
-.dropdown1.active {
-    display: block;
-}
-  </style>
-   <body>
-      <!-- header section start -->
-      <div class="header_section">
-         <div class="header_main">
-            <div class="mobile_menu">
-               <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                  <div class="logo_mobile"><a href="index.html"><img src="images/logo.png"></a></div>
-                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Services - Team Aharya</title>
+   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+   <link rel="stylesheet" type="text/css" href="css/style.css">
+   <link rel="stylesheet" href="css/responsive.css">
+   <link rel="icon" href="images/favcon.png" type="image/gif" />
+   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+   <link href="https://fonts.googleapis.com/css?family=Poppins:400,700,800,900|Outfit:300,400,500,600,700&display=swap"
+      rel="stylesheet">
+   <style>
+      .services-page {
+         background-color: #0c0c0e;
+         color: #ffffff;
+      }
+
+      .services-hero {
+         height: 60vh;
+         min-height: 400px;
+         background: linear-gradient(to bottom, rgba(12, 12, 14, 0.5), #0c0c0e), url('images/who_we_are_bg.jpg');
+         background-size: cover;
+         background-position: center;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         text-align: center;
+         padding: 0 20px;
+      }
+
+      .services-hero h1 {
+         font-size: clamp(40px, 8vw, 100px);
+         font-weight: 900;
+         color: #fff;
+         text-transform: uppercase;
+         letter-spacing: -2px;
+         margin-bottom: 20px;
+      }
+
+      .services-hero p {
+         font-size: clamp(16px, 2.5vw, 24px);
+         color: #d4af37;
+         font-weight: 500;
+         letter-spacing: 5px;
+         text-transform: uppercase;
+      }
+
+      .service-main-section {
+         padding: 100px 0;
+         background: #0c0c0e;
+      }
+
+      .service-card {
+         background: #16161a;
+         border-radius: 40px;
+         overflow: hidden;
+         border: 1px solid #28282e;
+         transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+         max-width: 1100px;
+         margin: 0 auto;
+         display: flex;
+         flex-wrap: wrap;
+         align-items: center;
+      }
+
+      .service-card:hover {
+         border-color: #d4af37;
+         box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6);
+         transform: translateY(-10px);
+      }
+
+      .service-img-side {
+         flex: 0 0 50%;
+         max-width: 50%;
+         height: 600px;
+         overflow: hidden;
+      }
+
+      .service-img-side img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         transition: transform 0.8s ease;
+      }
+
+      .service-card:hover .service-img-side img {
+         transform: scale(1.1);
+      }
+
+      .service-content-side {
+         flex: 0 0 50%;
+         max-width: 50%;
+         padding: 80px;
+      }
+
+      .service-label {
+         color: #d4af37;
+         text-transform: uppercase;
+         letter-spacing: 4px;
+         font-weight: 700;
+         font-size: 14px;
+         margin-bottom: 15px;
+         display: block;
+      }
+
+      .service-title {
+         font-size: 52px;
+         font-weight: 900;
+         color: #ffffff;
+         margin-bottom: 30px;
+         line-height: 1.1;
+      }
+
+      .service-description {
+         font-size: 18px;
+         line-height: 1.8;
+         color: #a0a0a5;
+         margin-bottom: 40px;
+      }
+
+      .service-points {
+         list-style: none;
+         padding: 0;
+         margin-bottom: 40px;
+      }
+
+      .service-points li {
+         position: relative;
+         padding-left: 30px;
+         margin-bottom: 15px;
+         color: #ffffff;
+         font-weight: 500;
+      }
+
+      .service-points li::before {
+         content: '✓';
+         position: absolute;
+         left: 0;
+         color: #d4af37;
+         font-weight: 900;
+      }
+
+      .service-cta {
+         display: inline-block;
+         background: #d4af37;
+         color: #000;
+         padding: 18px 40px;
+         border-radius: 50px;
+         font-weight: 700;
+         text-transform: uppercase;
+         letter-spacing: 2px;
+         transition: all 0.3s ease;
+         text-decoration: none;
+      }
+
+      .service-cta:hover {
+         background: #ffffff;
+         color: #000;
+         transform: scale(1.05);
+         text-decoration: none;
+      }
+
+      @media (max-width: 991px) {
+
+         .service-img-side,
+         .service-content-side {
+            flex: 0 0 100%;
+            max-width: 100%;
+         }
+
+         .service-img-side {
+            height: 400px;
+         }
+
+         .service-content-side {
+            padding: 40px;
+         }
+
+         .service-title {
+            font-size: 36px;
+         }
+      }
+   </style>
+</head>
+
+<body class="services-page">
+
+   <!-- header section start -->
+   <div class="header_section">
+      <div class="header_main">
+         <div class="mobile_menu">
+            <nav class="navbar navbar-expand-lg">
+               <div class="logo_mobile"><a href="index.html"><img src="images/logo.png"></a></div>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarNav">
-                     <ul class="navbar-nav">
-                        <li class="nav-item">
-                           <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                           <a class="nav-link" href="about.html">About</a>
-                        </li>
-                        <li class="nav-item">
-                           <a class="nav-link" href="services.html">Services</a>   
-                  
-                        </li>
-                          <li class="nav-item has-dropdown">
-                           <a class="nav-link" href="#" id="dropdown-toggle">Festival</a>
-                           <ul class="dropdown1" id="dropdown-menu">
-                               <li><a href="Festival24.html">2024</a></li>
-                               <li><a href="Festival23.html">2023</a></li>
-                           </ul>
-                       </li>
-                        <li class="nav-item">
-                           <a class="nav-link" href="gallery.html">Gallery</a>   
-                  
-                        </li>
-                        <li class="nav-item">
-                           <a class="nav-link" href="videos.html">Videos</a>   
-                  
-                        </li>
-                       
-                        <li class="nav-item">
-                           <a class="nav-link " href="contact.html">Contact</a>
-                        </li>
-                     </ul>
-                  </div>
-               </nav>
-            </div>
-            <div class="container-fluid">
-               <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
-               <div class="menu_main">
-                  <ul>
-                     <li class="active"><a href="index.html">Home</a></li>
-                     <li id="menu-products" class="has-dropdown"><a href="#">Festival</a>
-                        <ul class="dropdown">
+               </button>
+               <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                     <li class="nav-item has-dropdown">
+                        <a class="nav-link" href="#" id="dropdown-toggle">Festival</a>
+                        <ul class="dropdown1" id="dropdown-menu">
+                           <li><a href="Festival26.html">2026</a></li>
+                           <li><a href="Festival25.html">2025</a></li>
                            <li><a href="Festival24.html">2024</a></li>
                            <li><a href="Festival23.html">2023</a></li>
-                          
                         </ul>
                      </li>
-                     <li><a href="about.html">About</a></li>
-                     <li><a href="services.html">Services</a></li>
-                     <li><a href="gallery.html">Gallery</a></li>
-                     <li><a href="videos.html">Videos</a></li>
-                     <li><a href="contact.html">Contact us</a></li>
+                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                     <li class="nav-item active"><a class="nav-link" href="services.html">Services</a></li>
+                     <li class="nav-item"><a class="nav-link " href="contact.html">Contact</a></li>
                   </ul>
                </div>
-               </div>
+            </nav>
          </div>
-      </div>
-      <!-- header section end -->
-      <!-- services section start -->
-      <div class="services_section layout_padding">
-         <div class="container">
-            <h1 class="services_taital">Services </h1>
-            <p class="services_text">If you want to dance at a professional level, our excellent service comes to you now with expert training to equip the artist in you. See the variety of dance classes and services we are providing for you</p>
-            <div class="services_section_2">
-               <div class="row">
-                <!--  <div class="col-md-4">
-                     <div><img src="images/img-1.png" class="services_img"></div>
-                     <div class="btn_main"><a href="#">Bharathanatyam</a></div>
-                  </div>
-                  <div class="col-md-4">
-                     <div><img src="images/img-2.png" class="services_img"></div>
-                     <div class="btn_main"><a href="">Kuchipudi</a></div>
-                  </div>
-                  <div class="col-md-4">
-                     <div><img src="images/img-3.png" class="services_img"></div>
-                     <div class="btn_main"><a href="">Online & Offline Classes</a></div>
-                  </div>
-                  <div class="col-md-4">
-                     <div><img src="images/img-2.png" class="services_img"></div>
-                     <div class="btn_main"><a href="">Theory Sessions</a></div>
-                  </div> -->
-                  <div class="col-md-4">
-                     <div><img src="images/img-4.jpg" class="services_img"></div>
-                     <div class="btn_main"><a href="">Aharya Sabha</a></div>
+         <div class="container-fluid header-top-wrapper">
+            <div class="header-top">
+               <div class="logo">
+                  <a href="index.html">
+                     <img src="images/logo.png" alt="Aharya Logo">
+                  </a>
+                  <div class="logo-text-container">
+                     <div class="title-main">Team Aharya</div>
+                     <div class="title-sub">Centre for Performing Arts</div>
                   </div>
                </div>
+               <div class="reg-text">
+                  Kerala Sangeetha Nataka Academy<br>
+                  Reg No:381/EKM/2023, EKM/TC/79/2023
+               </div>
             </div>
-         </div>
-      </div>
-      <!-- services section end -->
-      <!-- footer section start -->
-      <div class="footer_section layout_padding">
-         <div class="container">
-           
-            <div class="location_main">
-               <h1>Aharya</h1>
-               <div class="call_text"><img src="images/call-icon.png"></div>
-               <div class="call_text"><a href="tel:+91 8281934233">Call +91 8281934233</a></div>
-               <div class="call_text"><img src="images/mail-icon.png"></div>
-               <div class="call_text"><a href="mailto:teamaharyaa@gmail.com">teamaharyaa@gmail.com</a></div>
-            </div>
-            <div class="social_icon">
+            <div class="menu_main">
                <ul>
-                  <li><a href="https://www.facebook.com/teamaharya/"><img src="images/fb-icon.png"></a></li>
-                  <li><a href="https://www.linkedin.com/in/team-aharya-27626526b/?originalSubdomain=in"><img src="images/linkedin-icon.png"></a></li>
-                  <li><a href="https://www.instagram.com/team.aharya/?igshid=YmMyMTA2M2Y%3D"><img src="images/instagram-icon.png"></a></li>
+                  <li><a href="index.html">Home</a></li>
+                  <li id="menu-products" class="has-dropdown active">
+                     <a href="#" class="toggle-dropdown">Festival</a>
+                     <ul class="dropdown">
+                        <li><a href="Festival26.html">2026</a></li>
+                        <li><a href="Festival25.html">2025</a></li>
+                        <li><a href="Festival24.html">2024</a></li>
+                        <li><a href="Festival23.html">2023</a></li>
+                     </ul>
+                  </li>
+                  <li><a href="about.html">About</a></li>
+                  <li class="active"><a href="services.html">Services</a></li>
+                  <li><a href="gallery.html">Gallery</a></li>
+                  <li><a href="videos.html">Videos</a></li>
+                  <li><a href="contact.html">Contact us</a></li>
                </ul>
             </div>
          </div>
       </div>
-      <!-- footer section end -->
-      <!-- copyright section start -->
-      <div class="copyright_section">
-         <div class="container">
-            <p class="copyright_text">2022 All Rights Reserved. Design by BIGHEADS CREATIVE TECH PVT. LTD</a></p>
+   </div>
+
+   <!-- Hero Section -->
+   <section class="services-hero">
+      <p>Expert Training & Artistry</p>
+      <h1>Our Services</h1>
+   </section>
+
+   <!-- Main Service Section -->
+   <section class="service-main-section">
+      <div class="container">
+         <div class="service-card">
+            <div class="service-img-side">
+               <img src="images/img-4.jpg" alt="Aharya Sabha">
+            </div>
+            <div class="service-content-side">
+               <span class="service-label">Flagship Program</span>
+               <h2 class="service-title">Aharya Sabha</h2>
+               <p class="service-description">
+                  At Team Aharya, we provide professional-level dance training designed to awaken and equip the artist
+                  within you. Our flagship service, **Aharya Sabha**, bridges the gap between traditional wisdom and
+                  professional performance excellence.
+               </p>
+               <ul class="service-points">
+                  <li>Professional Level Dance Training</li>
+                  <li>Expert Faculty Guidance</li>
+                  <li>Artistic Development Workshops</li>
+                  <li>Nritta - Natya Grandha Education</li>
+               </ul>
+               <a href="contact.html" class="service-cta">Join the Movement</a>
+            </div>
          </div>
       </div>
-      <!-- copyright section end -->
-      <!-- Javascript files-->
-      <script src="js/jquery.min.js"></script>
-      <script src="js/popper.min.js"></script>
-      <script src="js/bootstrap.bundle.min.js"></script>
-      <script src="js/jquery-3.0.0.min.js"></script>
-      <script src="js/plugin.js"></script>
-      <!-- sidebar -->
-      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-      <script src="js/custom.js"></script>
-      <!-- javascript --> 
-      <script src="js/owl.carousel.js"></script>
-      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>  
-       <script>
-        document.addEventListener('DOMContentLoaded', function() {
-    var dropdownToggle = document.getElementById('dropdown-toggle');
-    var dropdownMenu = document.getElementById('dropdown-menu');
+   </section>
 
-    dropdownToggle.addEventListener('click', function(e) {
-        e.preventDefault(); // Prevent default link behavior
-        dropdownMenu.classList.toggle('active'); // Toggle the active class on the dropdown menu
-    });
-    });
+   <!-- Footer -->
+   <div class="footer_section layout_padding">
+      <div class="container text-center">
+         <h1 style="color: #fff; margin-bottom: 30px;">Aharya School of Classical Dance</h1>
+         <div class="social_icon">
+            <ul>
+               <li><a href="https://www.facebook.com/teamaharya/"><i class="fa fa-facebook"></i></a></li>
+               <li><a href="https://www.instagram.com/team.aharya/"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+         </div>
+      </div>
+   </div>
 
+   <script src="js/jquery.min.js"></script>
+   <script src="js/bootstrap.bundle.min.js"></script>
+   <script>
+      $(document).ready(function () {
+         $('#dropdown-toggle').click(function (e) {
+            e.preventDefault();
+            $('#dropdown-menu').toggleClass('active');
+         });
+      });
+   </script>
+</body>
 
-      </script>
-   </body>
 </html>
