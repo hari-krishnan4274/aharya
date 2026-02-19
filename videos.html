@@ -120,6 +120,7 @@
          }
       }
    </style>
+   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Tillana:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body class="videos-page">
@@ -153,6 +154,8 @@
                </div>
             </nav>
          </div>
+         
+         
          <div class="container-fluid header-top-wrapper">
             <div class="header-top">
                <div class="logo">
@@ -165,11 +168,11 @@
                   </div>
                </div>
                <div class="reg-text">
-                  Kerala Sangeetha Nataka Academy<br>
-                  Reg No:381/EKM/2023, EKM/TC/79/2023
+                  Kerala Sangeetha Nataka Academy Reg No:381/EKM/2023
                </div>
             </div>
-            <div class="menu_main">
+         </div>
+<div class="menu_main">
                <ul>
                   <li><a href="index.html">Home</a></li>
                   <li id="menu-products" class="has-dropdown">
@@ -289,15 +292,69 @@
    </section>
 
    <!-- Footer -->
+   
    <div class="footer_section layout_padding">
-      <div class="container text-center">
-         <h1 style="color: #fff; margin-bottom: 30px;">Aharya School of Classical Dance</h1>
-         <div class="social_icon">
-            <ul>
-               <li><a href="https://www.facebook.com/teamaharya/"><i class="fa fa-facebook"></i></a></li>
-               <li><a href="https://www.instagram.com/team.aharya/"><i class="fa fa-instagram"></i></a></li>
-            </ul>
+      <div class="container">
+         <div class="footer-row">
+            <div class="footer-col">
+               <h3>About Aharya</h3>
+               <p>Team Aharya is a premier arts education organization dedicated to preserving and promoting Indian classical dance forms through world-class training and national festivals.</p>
+               <div class="social-links">
+                  <a href="https://www.facebook.com/teamaharya/"><i class="fa fa-facebook"></i></a>
+                  <a href="https://www.instagram.com/team.aharya/"><i class="fa fa-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/team-aharya-27626526b/"><i class="fa fa-linkedin"></i></a>
+               </div>
+            </div>
+            <div class="footer-col">
+               <h3>Quick Links</h3>
+               <ul class="footer-links">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="services.html">Our Services</a></li>
+                  <li><a href="gallery.html">Photo Gallery</a></li>
+                  <li><a href="videos.html">Video Gallery</a></li>
+                  <li><a href="contact.html">Contact Us</a></li>
+               </ul>
+            </div>
+            <div class="footer-col">
+               <h3>Festivals</h3>
+               <ul class="footer-links">
+                  <li><a href="Festival26.html">Festival 2026</a></li>
+                  <li><a href="Festival25.html">Festival 2025</a></li>
+                  <li><a href="Festival24.html">Festival 2024</a></li>
+                  <li><a href="Festival23.html">Festival 2023</a></li>
+               </ul>
+            </div>
+            <div class="footer-col">
+               <h3>Contact Us</h3>
+               <div class="footer-contact-item">
+                  <i class="fa fa-map-marker"></i>
+                  <div class="footer-contact-info">
+                     Kalady, Ernakulam, Kerala<br>
+                     Reg No: 381/EKM/2023
+                  </div>
+               </div>
+               <div class="footer-contact-item">
+                  <i class="fa fa-phone"></i>
+                  <div class="footer-contact-info">
+                     <a href="tel:+919074350422">+91 9074350422</a><br>
+                     <a href="tel:+918281934233">+91 8281934233</a>
+                  </div>
+               </div>
+               <div class="footer-contact-item">
+                  <i class="fa fa-envelope"></i>
+                  <div class="footer-contact-info">
+                     <a href="mailto:teamaharyaa@gmail.com">teamaharyaa@gmail.com</a>
+                  </div>
+               </div>
+            </div>
          </div>
+      </div>
+   </div>
+
+   <div class="copyright_section">
+      <div class="container">
+         <p class="copyright_text">2022 All Rights Reserved. Design by CRUDOPS PVT. LTD</p>
       </div>
    </div>
 
@@ -305,16 +362,19 @@
    <script src="js/jquery.min.js"></script>
    <script src="js/bootstrap.bundle.min.js"></script>
    <script>
-      $(document).ready(function () {
-         $('#dropdown-toggle').click(function (e) {
-            e.preventDefault();
-            $('#dropdown-menu').toggleClass('active');
-         });
-      });
-   </script>
-
-   <script>
       document.addEventListener('DOMContentLoaded', function () {
+         // Mobile Menu Toggler
+         var navbarToggler = document.querySelector('.mobile_menu .navbar-toggler');
+         var navbarCollapse = document.getElementById('navbarNav');
+         if (navbarToggler && navbarCollapse) {
+            navbarToggler.addEventListener('click', function (e) {
+               e.preventDefault();
+               e.stopPropagation();
+               navbarCollapse.classList.toggle('show');
+               this.setAttribute('aria-expanded', navbarCollapse.classList.contains('show'));
+            });
+         }
+
          // Festival Dropdown Toggle
          var dropdownToggle = document.getElementById('dropdown-toggle');
          var dropdownMenu = document.getElementById('dropdown-menu');
@@ -322,17 +382,19 @@
             dropdownToggle.addEventListener('click', function (e) {
                e.preventDefault();
                dropdownMenu.classList.toggle('active');
+               this.classList.toggle('open');
             });
          }
 
-         // Mobile Menu Toggler Fallback
-         var navbarToggler = document.querySelector('.navbar-toggler');
-         var navbarCollapse = document.getElementById('navbarNav');
-         if (navbarToggler && navbarCollapse) {
-            navbarToggler.addEventListener('click', function () {
-               navbarCollapse.classList.toggle('show');
-            });
-         }
+         // Close menu when clicking outside
+         document.addEventListener('click', function (e) {
+            if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+               if (!navbarCollapse.contains(e.target) && navbarToggler && !navbarToggler.contains(e.target)) {
+                  navbarCollapse.classList.remove('show');
+                  navbarToggler.setAttribute('aria-expanded', 'false');
+               }
+            }
+         });
       });
    </script>
 

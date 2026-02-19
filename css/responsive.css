@@ -861,7 +861,198 @@
         line-height: 1.4;
         position: static !important;
     }
+}
 
+/* ============================================================
+   MOBILE MENU FIX - Complete Override for all pages
+   ============================================================ */
 
+@media (max-width: 991px) {
 
+    /* Fix the navbar container - override conflicting style.css rules */
+    .mobile_menu .navbar {
+        background-color: rgba(12, 12, 14, 0.97) !important;
+        overflow: visible !important;
+        padding: 10px 15px;
+        position: relative;
+        z-index: 9999;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    /* Make the navbar flex layout work correctly */
+    .mobile_menu .navbar.navbar-expand-lg {
+        display: flex !important;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* Logo in mobile nav */
+    .mobile_menu .logo_mobile {
+        width: auto !important;
+        float: none !important;
+        padding-bottom: 0 !important;
+        display: flex;
+        align-items: center;
+    }
+
+    .mobile_menu .logo_mobile img {
+        height: 45px;
+        width: auto;
+    }
+
+    /* ---- NAVBAR TOGGLER (Hamburger Button) ---- */
+    .mobile_menu .navbar-toggler {
+        display: block !important;
+        border: 2px solid #d4af37 !important;
+        border-radius: 6px !important;
+        padding: 8px 12px !important;
+        background: transparent !important;
+        cursor: pointer;
+        outline: none !important;
+        box-shadow: none !important;
+        position: relative;
+        z-index: 10000;
+        flex-shrink: 0;
+    }
+
+    .mobile_menu .navbar-toggler:focus {
+        outline: none !important;
+        box-shadow: none !important;
+    }
+
+    /* Custom hamburger icon - replaces Bootstrap's SVG (which requires navbar-light/dark) */
+    .mobile_menu .navbar-toggler-icon {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background-color: #d4af37;
+        position: relative;
+        background-image: none !important;
+    }
+
+    .mobile_menu .navbar-toggler-icon::before,
+    .mobile_menu .navbar-toggler-icon::after {
+        content: '';
+        display: block;
+        width: 22px;
+        height: 2px;
+        background-color: #d4af37;
+        position: absolute;
+        left: 0;
+    }
+
+    .mobile_menu .navbar-toggler-icon::before {
+        top: -7px;
+    }
+
+    .mobile_menu .navbar-toggler-icon::after {
+        top: 7px;
+    }
+
+    /* ---- COLLAPSIBLE MENU PANEL ---- */
+    .mobile_menu .navbar-collapse {
+        width: 100%;
+        flex-basis: 100%;
+        background-color: rgba(12, 12, 14, 0.98);
+        border-top: 1px solid rgba(212, 175, 55, 0.3);
+        margin-top: 10px;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .mobile_menu .navbar-collapse.show {
+        display: block !important;
+    }
+
+    .mobile_menu .collapse:not(.show) {
+        display: none !important;
+    }
+
+    /* ---- NAV ITEMS & LINKS ---- */
+    .mobile_menu .navbar-nav {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        padding: 5px 0;
+        width: 100%;
+    }
+
+    .mobile_menu .nav-item {
+        width: 100% !important;
+        position: relative;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .mobile_menu .nav-item:last-child {
+        border-bottom: none;
+    }
+
+    .mobile_menu .navbar-nav .nav-link,
+    .mobile_menu .navbar-expand-lg .navbar-nav .nav-link {
+        color: #ffffff !important;
+        text-align: left !important;
+        padding: 14px 20px !important;
+        font-size: 14px !important;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        width: 100% !important;
+        display: block;
+        background: transparent !important;
+        border-radius: 0 !important;
+        margin: 0 !important;
+    }
+
+    .mobile_menu .navbar-nav .nav-link:hover,
+    .mobile_menu .navbar-nav .nav-link:focus {
+        color: #d4af37 !important;
+        background: rgba(212, 175, 55, 0.08) !important;
+    }
+
+    /* ---- FESTIVAL DROPDOWN (dropdown1) ---- */
+    .mobile_menu .dropdown1 {
+        display: none;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        background: rgba(25, 25, 30, 0.98);
+        border-left: 3px solid #d4af37;
+        width: 100%;
+    }
+
+    .mobile_menu .dropdown1.active {
+        display: block !important;
+    }
+
+    .mobile_menu .dropdown1 li {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .mobile_menu .dropdown1 li:last-child {
+        border-bottom: none;
+    }
+
+    .mobile_menu .dropdown1 li a {
+        display: block;
+        padding: 12px 30px;
+        color: #cccccc !important;
+        font-size: 13px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-decoration: none;
+    }
+
+    .mobile_menu .dropdown1 li a:hover {
+        color: #d4af37 !important;
+        background: rgba(212, 175, 55, 0.08);
+    }
+
+    /* Arrow indicator for Festival dropdown toggle */
+    .mobile_menu .nav-item.has-dropdown>.nav-link::after {
+        content: ' \25BE';
+        font-size: 12px;
+        color: #d4af37;
+        float: right;
+        margin-top: 2px;
+    }
 }
