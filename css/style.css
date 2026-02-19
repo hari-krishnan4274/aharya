@@ -1982,7 +1982,7 @@ z-index: 1;
       position: relative;
       height: 60vh;
       min-height: 400px;
-      background-image: linear-gradient(to bottom, rgba(10, 10, 12, 0.4), #0a0a0c), url('../images/who_we_are_bg.jpg');
+      background-image: linear-gradient(to bottom, rgba(10, 10, 12, 0.4), #0a0a0c), url('../images/who_we_are_real.jpg');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
