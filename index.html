@@ -224,22 +224,25 @@
 
    .faculty-grid {
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       gap: 40px;
       margin-top: 40px;
    }
 
    .faculty-card-premium {
-      max-width: 450px;
+      max-width: 100%;
       width: 100%;
       background: linear-gradient(145deg, #1a1a1e, #131316);
       border: 1px solid rgba(212, 175, 55, 0.15);
       border-radius: 24px;
-      padding: 40px 30px;
-      text-align: center;
+      padding: 60px;
+      text-align: left;
       transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       position: relative;
       overflow: hidden;
+      display: flex;
+      align-items: flex-start;
+      gap: 60px;
    }
 
    .faculty-card-premium::before {
@@ -265,9 +268,10 @@
    }
 
    .faculty-image-wrapper {
-      width: 150px;
-      height: 150px;
-      margin: 0 auto 25px;
+      width: 300px;
+      height: 300px;
+      flex-shrink: 0;
+      margin: 0;
       position: relative;
    }
 
@@ -304,10 +308,29 @@
 
    .faculty-mini-bio {
       font-family: 'Poppins', sans-serif;
-      font-size: 14.5px;
-      line-height: 1.7;
+      font-size: 16px;
+      line-height: 1.8;
       color: #cccccc;
       margin: 0;
+   }
+
+   @media (max-width: 991px) {
+      .faculty-card-premium {
+         flex-direction: column;
+         align-items: center;
+         text-align: center;
+         padding: 40px 20px;
+         gap: 30px;
+      }
+
+      .faculty-image-wrapper {
+         width: 200px;
+         height: 200px;
+      }
+
+      .faculty-grid {
+         justify-content: center;
+      }
    }
 
    /* Premium Logo Typography */
@@ -459,8 +482,7 @@
                <div class="carousel-item active">
                   <div class="container">
                      <div class="classical-quote-container">
-                        <h2 class="english-expression main-banner-text">Art leads. The artist serves.</h2>
-                        <div class="read_bt" style="margin-top: 50px;"><a href="contact.html">Discover More</a></div>
+                        <h2 class="english-expression main-banner-text">Art leads.<br> The artist serves.</h2>
                      </div>
                   </div>
                </div>
@@ -556,27 +578,166 @@
       </div>
 
       <!-- Academic Partnership Section -->
-      <div class="container academic-partnership-block" style="margin-top: 50px; margin-bottom: 50px;">
-         <div
-            style="background: #fdfaf3; border: 1px solid #d4af37; border-radius: 20px; padding: 40px; box-shadow: 0 10px 30px rgba(212, 175, 55, 0.1);">
-            <div style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 30px;">
-               <div class="partnership-badge"
-                  style="background: #d4af37; color: #fff; padding: 15px 30px; border-radius: 50px; font-family: 'Cinzel', serif; font-weight: 700; font-size: 1.2rem; letter-spacing: 1px;">
-                  ACADEMIC PARTNER
+      <div class="container academic-partnership-block" style="margin-top: 60px; margin-bottom: 60px;">
+
+         <style>
+            .alliance-diploma-card {
+               background: linear-gradient(145deg, #1a1a1e, #111114);
+               border: 1px solid rgba(212, 175, 55, 0.4);
+               border-radius: 28px;
+               padding: 60px;
+               box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(212, 175, 55, 0.05);
+               display: flex;
+               flex-wrap: wrap;
+               gap: 50px;
+               align-items: flex-start;
+            }
+
+            .alliance-logo-col {
+               flex: 0 0 280px;
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               gap: 20px;
+            }
+
+            .alliance-logo-img {
+               width: 240px;
+               object-fit: contain;
+               filter: brightness(1.2);
+            }
+
+            .alliance-badge {
+               background: linear-gradient(135deg, #d4af37, #aa8425);
+               color: #0c0c0e;
+               padding: 8px 22px;
+               border-radius: 50px;
+               font-family: 'Poppins', sans-serif;
+               font-size: 12px;
+               font-weight: 800;
+               letter-spacing: 2px;
+               text-transform: uppercase;
+               text-align: center;
+               white-space: nowrap;
+            }
+
+            .alliance-content-col {
+               flex: 1;
+               min-width: 280px;
+            }
+
+            .alliance-sub-card {
+               background: rgba(255, 255, 255, 0.03);
+               border: 1px solid rgba(212, 175, 55, 0.12);
+               border-radius: 16px;
+               padding: 28px 30px;
+            }
+
+            .alliance-sub-card h5 {
+               color: #fff;
+               font-family: 'Cinzel', serif;
+               font-size: 17px;
+               margin-bottom: 18px;
+               padding-bottom: 12px;
+               border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            }
+
+            .alliance-sub-card ul {
+               list-style: none;
+               padding: 0;
+               margin: 0;
+            }
+
+            .alliance-sub-card ul li {
+               color: #ddd;
+               margin-bottom: 10px;
+               padding-left: 22px;
+               position: relative;
+               font-family: 'Poppins', sans-serif;
+               font-size: 15px;
+               line-height: 1.6;
+            }
+
+            .alliance-sub-card ul li:last-child {
+               margin-bottom: 0;
+            }
+
+            .alliance-sub-card ul li span.bullet {
+               color: #d4af37;
+               position: absolute;
+               left: 0;
+            }
+
+            @media (max-width: 768px) {
+               .alliance-diploma-card {
+                  padding: 35px 25px;
+                  gap: 30px;
+               }
+
+               .alliance-logo-col {
+                  flex: 0 0 100%;
+                  flex-direction: row;
+                  gap: 20px;
+                  align-items: center;
+               }
+
+               .alliance-logo-img {
+                  width: 120px;
+               }
+            }
+         </style>
+
+         <div class="alliance-diploma-card">
+            <!-- Logo Column -->
+            <div class="alliance-logo-col">
+               <img src="images/alliance_logo.png" alt="Alliance University – NAAC A+" class="alliance-logo-img">
+               <div class="alliance-badge">Academic Partner</div>
+            </div>
+            <!-- Content Column -->
+            <div class="alliance-content-col">
+               <h3
+                  style="font-family: 'Cinzel', serif; font-weight: 700; color: #fff; font-size: 30px; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">
+                  Diploma Program – Online
+               </h3>
+               <div style="height: 3px; width: 60px; background: #d4af37; margin: 14px 0 24px;"></div>
+               <p
+                  style="font-family: 'Poppins', sans-serif; color: #bbb; font-size: 16px; margin-bottom: 18px; line-height: 1.8;">
+                  Aharya School of Classical Dance offers a <strong style="color:#fff;">One-Year Online Diploma
+                     Program</strong> in association with <strong style="color:#fff;">Alliance University,
+                     Bengaluru</strong> — a <strong style="color:#d4af37;">NAAC A+</strong> accredited university.
+               </p>
+               <p
+                  style="font-family: 'Poppins', sans-serif; color: #bbb; font-size: 16px; margin-bottom: 32px; line-height: 1.8;">
+                  This program provides structured academic certification alongside traditional classical training,
+                  enabling students to pursue formal qualification without geographical limitations.
+               </p>
+               <!-- Sub-cards -->
+               <div style="display: flex; flex-wrap: wrap; gap: 24px; margin-bottom: 32px;">
+                  <div class="alliance-sub-card" style="flex: 1; min-width: 190px;">
+                     <h5>Disciplines Offered</h5>
+                     <ul>
+                        <li><span class="bullet">❖</span> Bharatanatyam</li>
+                        <li><span class="bullet">❖</span> Kuchipudi</li>
+                        <li><span class="bullet">❖</span> Mohiniyattam</li>
+                     </ul>
+                  </div>
+                  <div class="alliance-sub-card" style="flex: 2; min-width: 240px;">
+                     <h5>The Online Diploma Integrates</h5>
+                     <ul>
+                        <li><span class="bullet">✓</span> Guided practical training</li>
+                        <li><span class="bullet">✓</span> Theoretical studies rooted in classical texts and aesthetics
+                        </li>
+                        <li><span class="bullet">✓</span> Periodic assessments and academic evaluation</li>
+                        <li><span class="bullet">✓</span> University-recognised certification</li>
+                     </ul>
+                  </div>
                </div>
-               <div style="text-align: left; max-width: 600px;">
-                  <h3
-                     style="font-family: 'Cinzel', serif; font-weight: 700; color: #1a1a1a; font-size: 28px; margin-bottom: 10px;">
-                     Alliance University, Bangalore</h3>
-                  <p
-                     style="font-family: 'Poppins', sans-serif; color: #555; font-size: 16px; margin: 0; line-height: 1.6;">
-                     We are proud to announce our official partnership with <strong>Alliance University
-                        Bangalore</strong>
-                     to offer specialized <strong>Diploma Programs in Bharathanatyam</strong>. This collaboration brings
-                     together
-                     traditional excellence and academic rigor to empower the next generation of classical dancers.
-                  </p>
-               </div>
+               <!-- Quote -->
+               <p
+                  style="font-family: 'Poppins', sans-serif; color: #d4af37; font-size: 15px; margin: 0; line-height: 1.8; font-style: italic; border-left: 3px solid #d4af37; padding-left: 18px;">
+                  "The program is designed for committed students seeking systematic learning, scholarly understanding,
+                  and recognised academic credentials in Indian classical dance."
+               </p>
             </div>
          </div>
       </div>
@@ -602,7 +763,7 @@
             </div>
             <div class="stat-card">
                <i class="fa fa-university"></i>
-               <div class="stat-val">6</div>
+               <div class="stat-val">7</div>
                <div class="stat-label">Dance Schools</div>
             </div>
             <div class="stat-card">
@@ -626,23 +787,43 @@
 
    <!-- Faculty Section Integration -->
    <section class="faculty-spotlight">
-      <div class="container">
+      <div class="container-fluid" style="max-width: 1400px; padding: 0 40px;">
          <div class="faculty-grid">
             <!-- Faculty Member 1: Praveen Kaimadathil -->
             <div class="faculty-card-premium">
                <div class="faculty-image-wrapper">
                   <img src="images/praveen.JPG" alt="Praveen Kaimadathil">
                </div>
-               <h3>Praveen Kaimadathil</h3>
-               <span class="faculty-designation">Founder</span>
-               <p class="faculty-mini-bio">
-                  A prominent figure in classical arts for over 13 years, holding Master's degrees in Bharatanatyam from
-                  SSUS. A CCRT Fellow recognized by the Government of India for his research and dedication to rhythmic
-                  excellence.
-               </p>
+               <div class="faculty-info">
+                  <h3>Praveen Kaimadathil</h3>
+                  <span class="faculty-designation">Founder</span>
+                  <p class="faculty-mini-bio">
+                     Praveen Kaimadathil is a classical dance educator , choreographer and cultural organizer based in
+                     kalady, Kerala, India. He is the Founder of Team Aharya, an arts institution dedicated to nurturing
+                     Indian classical dance through structured training, performance platforms, and cultural
+                     initiatives.
+                     He holds a Bachelor’s and Master’s degree in Bharatanatyam from Sree Sankaracharya University of
+                     Sanskrit (SSUS) .In 2018, he was awarded the prestigious CCRT (Centre for Cultural Resources and
+                     Training) Fellowship by the Government of India. Earlier, in 2017, he received the Vajra Jubilee
+                     Fellowship from the Kerala Department of Culture in recognition of his contribution to classical
+                     arts.
+                     As a visionary choreographer, he has conceptualised and directed several acclaimed dance
+                     productions
+                     including Chitrapadaravanam — a powerful narrative on Rama, Sita, Ravana and Hanuman; Krishna Shila
+                     —
+                     based on the history of the Guruvayur Temple; Maa — portraying the life of Adi Shankaracharya
+                     through
+                     the eyes of Aryamba; and Karnan — depicting the life and valor of Karna.
+                     He is a dedicated exponent of classical Natya treatises such as the Natyashastra and Abhinaya
+                     Darpana,
+                     guiding the theoretical and aesthetic foundations of Indian classical dance.
+                     Under his leadership, Team Aharya organizes Kerala’s
+                     biggest residential classical dance workshop and National Dance Festival. classical dance.
+                     Through vision, discipline, and cultural commitment, Praveen Kaimadathil continues to contribute
+                     significantly to the growth and expansion of classical dance in India.
+                  </p>
+               </div>
             </div>
-
-
          </div>
       </div>
    </section>

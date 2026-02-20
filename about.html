@@ -178,6 +178,95 @@
             padding: 40px;
          }
       }
+
+      /* Artistes Section */
+      .artistes-section {
+         padding: 100px 0;
+         background-color: #0c0c0e;
+         border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+      }
+
+      .artistes-header {
+         text-align: center;
+         margin-bottom: 60px;
+         max-width: 800px;
+         margin-left: auto;
+         margin-right: auto;
+      }
+
+      .artistes-header h2 {
+         font-size: clamp(32px, 5vw, 42px);
+         font-family: 'Cinzel', serif;
+         color: #d4af37;
+         font-weight: 700;
+         margin-bottom: 20px;
+      }
+
+      .artistes-header .line {
+         height: 2px;
+         width: 60px;
+         background: #d4af37;
+         margin: 0 auto 30px;
+      }
+
+      .artistes-header p {
+         font-size: 18px;
+         color: #bbb;
+         line-height: 1.8;
+         font-family: 'Poppins', sans-serif;
+      }
+
+      .artistes-grid {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+         gap: 30px;
+      }
+
+      .artiste-category {
+         background: #16161a;
+         border: 1px solid #28282e;
+         border-radius: 20px;
+         padding: 40px 30px;
+         transition: all 0.4s ease;
+      }
+
+      .artiste-category:hover {
+         border-color: #d4af37;
+         transform: translateY(-5px);
+      }
+
+      .artiste-category h3 {
+         font-family: 'Cinzel', serif;
+         color: #fff;
+         font-size: 24px;
+         margin-bottom: 25px;
+         padding-bottom: 15px;
+         border-bottom: 1px dashed rgba(212, 175, 55, 0.3);
+      }
+
+      .artiste-list {
+         list-style: none;
+         padding: 0;
+         margin: 0;
+      }
+
+      .artiste-list li {
+         color: #bbb;
+         font-size: 16px;
+         margin-bottom: 12px;
+         padding-left: 20px;
+         position: relative;
+         line-height: 1.6;
+      }
+
+      .artiste-list li::before {
+         content: "•";
+         color: #d4af37;
+         position: absolute;
+         left: 0;
+         top: -2px;
+         font-size: 18px;
+      }
    </style>
    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Tillana:wght@400;700&display=swap"
       rel="stylesheet">
@@ -214,8 +303,8 @@
                </div>
             </nav>
          </div>
-         
-         
+
+
          <div class="container-fluid header-top-wrapper">
             <div class="header-top">
                <div class="logo">
@@ -232,26 +321,26 @@
                </div>
             </div>
          </div>
-<div class="menu_main">
-         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li id="menu-products" class="has-dropdown">
-               <a href="#" class="toggle-dropdown">Festival</a>
-               <ul class="dropdown">
-                  <li><a href="Festival26.html">2026</a></li>
-                  <li><a href="Festival25.html">2025</a></li>
-                  <li><a href="Festival24.html">2024</a></li>
-                  <li><a href="Festival23.html">2023</a></li>
-               </ul>
-            </li>
-            <li class="active"><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="videos.html">Videos</a></li>
-            <li><a href="contact.html">Contact us</a></li>
-         </ul>
+         <div class="menu_main">
+            <ul>
+               <li><a href="index.html">Home</a></li>
+               <li id="menu-products" class="has-dropdown">
+                  <a href="#" class="toggle-dropdown">Festival</a>
+                  <ul class="dropdown">
+                     <li><a href="Festival26.html">2026</a></li>
+                     <li><a href="Festival25.html">2025</a></li>
+                     <li><a href="Festival24.html">2024</a></li>
+                     <li><a href="Festival23.html">2023</a></li>
+                  </ul>
+               </li>
+               <li class="active"><a href="about.html">About</a></li>
+               <li><a href="services.html">Services</a></li>
+               <li><a href="gallery.html">Gallery</a></li>
+               <li><a href="videos.html">Videos</a></li>
+               <li><a href="contact.html">Contact us</a></li>
+            </ul>
+         </div>
       </div>
-   </div>
    </div>
    </div>
 
@@ -264,8 +353,9 @@
             <p>Team Aharya Centre for Performing Arts is a distinguished organization committed to the preservation,
                promotion, and growth of Indian classical dance and performing arts. Focussed on nurturing talent,
                fostering creativity, and advancing technical proﬁciency, the Centre serves as a vibrant hub where
-               artists explore and deepen their expertise in traditional dance forms such as Bharatanatyam, Kuchipudi,
-               and Mohiniyattam.</p>
+               artists explore and deepen their expertise in traditional dance forms such as Bharatanatyam and
+               Kuchipudi,
+            </p>
             <p>Through a variety of initiatives, including the prestigious Aharya National Dance Festival and Vachika
                Fest, Team Aharya creates valuable platforms for both emerging and established artists to showcase their
                skills and gain hands-on real-world experience, and interact with a broader artistic community.</p>
@@ -287,7 +377,7 @@
 
                <p>Aharya School of Classical Dance is a premier institution dedicated to the teaching, preservation and
                   promotion of Indian classical dance forms. Focused on creating a strong foundation for dancers, the
-                  school offers comprehensive training in Bharatanatyam, Kuchipudi, and Mohiniyattam. Expert instructors
+                  school offers comprehensive training in Bharatanatyam and Kuchipudi. Expert instructors
                   with years of experience and deep knowledge guide students, ensuring they receive world-class
                   education and mentorship.</p>
                <p>At Aharya, students gain not only technical proﬁciency but also a profound understanding of the
@@ -312,7 +402,7 @@
                <p>Foundation Year</p>
             </div>
             <div class="col-md-3 stat-box">
-               <h3>8+</h3>
+               <h3>2</h3>
                <p>Art Forms</p>
             </div>
             <div class="col-md-3 stat-box">
@@ -326,6 +416,82 @@
          </div>
       </div>
    </div>
+
+   <!-- Artistes Section -->
+   <section class="artistes-section">
+      <div class="container">
+         <div class="artistes-header">
+            <h2>The Esteemed Gurus & Artistes</h2>
+            <div class="line"></div>
+            <p>In the sacred continuum of Indian classical arts, our festival has been privileged to host eminent Gurus,
+               performers, scholars, musicians, and traditional practitioners from across the country.</p>
+            <p>Their presence, pedagogy, and performance have strengthened our artistic foundation and enriched our
+               cultural legacy.</p>
+         </div>
+
+         <div class="artistes-grid">
+            <!-- Bharatanatyam -->
+            <div class="artiste-category" style="grid-row: span 2;">
+               <h3>Bharatanatyam</h3>
+               <ul class="artiste-list">
+                  <li>Shankar Kandasamy</li>
+                  <li>Dr. Janaki Rangarajan</li>
+                  <li>Parshwanath Upadhye</li>
+                  <li>Adithya P V</li>
+                  <li>Srithi Gopal</li>
+                  <li>Rama Vaidyanathan</li>
+                  <li>Vaibhav Arekar</li>
+                  <li>Praveen Kumar</li>
+                  <li>Shijith N Parvathy</li>
+                  <li>Padma Shri Dr. Narthaki Nataraj</li>
+                  <li>Sweta Prachande</li>
+                  <li>Manju V Nair</li>
+               </ul>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 30px;">
+               <!-- Kuchipudi -->
+               <div class="artiste-category">
+                  <h3>Kuchipudi</h3>
+                  <ul class="artiste-list">
+                     <li>Dr. Bijinia Surendranath</li>
+                     <li>Surendranath</li>
+                     <li>Sreelakshmi Govardhan</li>
+                  </ul>
+               </div>
+
+               <!-- Mohiniyattam -->
+               <div class="artiste-category" style="flex: 1;">
+                  <h3>Mohiniyattam</h3>
+                  <ul class="artiste-list">
+                     <li>Kalamandalam Sugandhi</li>
+                  </ul>
+               </div>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 30px;">
+               <!-- Music & Allied Disciplines -->
+               <div class="artiste-category">
+                  <h3>Music & Allied Disciplines</h3>
+                  <ul class="artiste-list">
+                     <li>Nattuvanar K S Balakrishnan – Nattuvangam</li>
+                     <li>Shyam Kalyan – Violin</li>
+                     <li>Prince T Narayanan – Classical Stage Makeup</li>
+                     <li>Anand Narayanan – Yoga</li>
+                  </ul>
+               </div>
+
+               <!-- Koodiyattam -->
+               <div class="artiste-category" style="flex: 1;">
+                  <h3>Koodiyattam</h3>
+                  <ul class="artiste-list">
+                     <li>Margi Madhu Chakyar</li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
 
    <!-- Management Team Section -->
    <section class="team-section">
@@ -345,21 +511,32 @@
                   <h3 class="member-name">Praveen Kaimadathil</h3>
                   <span class="member-role">Founder & CEO</span>
                   <p class="member-bio">
-                     Shri Praveen Kaimadathil has been a prominent figure in arts and social fields for over 13 years.
-                     In 2013, he established Cochin Natyashala in Kaladi with the aim of bringing Bharatanatyam to
-                     enthusiasts from all walks of life.
-                     <br><br>
-                     A scholar and practitioner, he holds both Bachelor's and Master's degrees in Bharatanatyam from
-                     Sree Sankaracharya University of Sanskrit. His contributions were recognized with a research
-                     fellowship from the Kerala Culture Department in 2017 and the CCRT fellowship from the Government
-                     of India in 2018.
+                     Praveen Kaimadathil is a classical dance educator , choreographer and cultural organizer based in
+                     kalady, Kerala, India. He is the Founder of Team Aharya, an arts institution dedicated to nurturing
+                     Indian classical dance through structured training, performance platforms, and cultural
+                     initiatives.
+                     He holds a Bachelor’s and Master’s degree in Bharatanatyam from Sree Sankaracharya University of
+                     Sanskrit (SSUS) .<br>
+                     In 2018, he was awarded the prestigious CCRT (Centre for Cultural Resources and Training)
+                     Fellowship by the Government of India. Earlier, in 2017, he received the Vajra Jubilee Fellowship
+                     from the Kerala Department of Culture in recognition of his contribution to classical arts.
+                     As a visionary choreographer, he has conceptualised and directed several acclaimed dance
+                     productions including Chitrapadaravanam — a powerful narrative on Rama, Sita, Ravana and Hanuman;
+                     Krishna Shila — based on the history of the Guruvayur Temple; Maa — portraying the life of Adi
+                     Shankaracharya through the eyes of Aryamba; and Karnan — depicting the life and valor of Karna.<br>
+                     He is a dedicated exponent of classical Natya treatises such as the Natyashastra and Abhinaya
+                     Darpana, guiding the theoretical and aesthetic foundations of Indian classical dance.
+                     Under his leadership, Team Aharya organizes Kerala’s
+                     biggest residential classical dance workshop and National Dance Festival. classical dance.
+                     Through vision, discipline, and cultural commitment, Praveen Kaimadathil continues to contribute
+                     significantly to the growth and expansion of classical dance in India.
                   </p>
                </div>
             </div>
          </div>
 
          <!-- Sreelakshmi Section -->
-         <div class="management-card">
+         <!-- <div class="management-card">
             <div class="card-row flex-row-reverse">
                <div class="card-img-side">
                   <img src="images/client2-img.jpg" alt="Sreelakshmi Warrier">
@@ -377,7 +554,7 @@
                   </p>
                </div>
             </div>
-         </div>
+         </div> -->
 
       </div>
    </section>

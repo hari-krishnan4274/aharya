@@ -36,71 +36,103 @@
         }
 
         .memory-section {
-            padding: 100px 0;
-            background-color: #0c0c0e;
+            padding: 120px 0 80px;
+            background: #08080a;
             color: #fff;
         }
 
         .memory-card {
-            background: #16161a;
-            border-radius: 20px;
+            background: linear-gradient(145deg, #16161a, #0c0c0e);
+            border-radius: 24px;
             overflow: hidden;
-            margin-bottom: 30px;
-            border: 1px solid #28282e;
-            transition: transform 0.3s ease;
+            margin-bottom: 40px;
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
         .memory-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-15px);
             border-color: #d4af37;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7), 0 0 30px rgba(212, 175, 55, 0.1);
         }
 
         .memory-img {
             width: 100%;
-            height: 300px;
+            height: 320px;
             object-fit: cover;
             cursor: pointer;
+            transition: transform 0.6s ease;
+        }
+
+        .memory-card:hover .memory-img {
+            transform: scale(1.05);
         }
 
         .memory-info {
-            padding: 30px;
+            padding: 35px;
+            position: relative;
+            z-index: 2;
+            background: linear-gradient(145deg, #16161a, #0c0c0e);
         }
 
         .memory-info h3 {
             color: #d4af37;
-            font-size: 24px;
+            font-size: 26px;
             margin-bottom: 15px;
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
         }
 
         .memory-info p {
-            color: #bbb;
+            color: #ccc;
             font-size: 16px;
-            line-height: 1.6;
+            line-height: 1.8;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
         }
 
         .stats-highlight {
-            background: #d4af37;
-            color: #000;
-            padding: 60px 0;
-            margin: 50px 0;
+            background: linear-gradient(135deg, #dfbc4c 0%, #aa8425 100%);
+            color: #0c0c0e;
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .stats-highlight::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://www.transparenttextures.com/patterns/stardust.png');
+            opacity: 0.3;
+            pointer-events: none;
         }
 
         .stat-item h2 {
-            font-size: 48px;
+            font-size: 56px;
+            font-family: 'Cinzel', serif;
             font-weight: 800;
-            margin: 0;
+            margin: 0 0 10px 0;
+            text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.2);
         }
 
         .stat-item p {
-            font-size: 18px;
-            font-weight: 600;
+            font-size: 16px;
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 2px;
             text-transform: uppercase;
             margin: 0;
+            opacity: 0.9;
         }
 
         /* Reuse Lightbox from 2026 */
     </style>
-   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Tillana:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Tillana:wght@400;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body class="festival-2025-page" style="background-color: #0c0c0e;">
@@ -134,45 +166,45 @@
                     </div>
                 </nav>
             </div>
-            
-         
-         <div class="container-fluid header-top-wrapper">
-            <div class="header-top">
-               <div class="logo">
-                  <a href="index.html">
-                     <img src="images/logo.png" alt="Aharya Logo">
-                  </a>
-                  <div class="logo-text-container">
-                     <div class="title-main">Team Aharya</div>
-                     <div class="title-sub">Centre for Performing Arts</div>
-                  </div>
-               </div>
-               <div class="reg-text">
-                  Kerala Sangeetha Nataka Academy Reg No:381/EKM/2023
-               </div>
-            </div>
-         </div>
-<div class="menu_main">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li id="menu-products" class="has-dropdown active">
-                            <a href="#" class="toggle-dropdown">Festival</a>
-                            <ul class="dropdown">
-                                <li><a href="Festival26.html">2026</a></li>
-                                <li><a href="Festival25.html">2025</a></li>
-                                <li><a href="Festival24.html">2024</a></li>
-                                <li><a href="Festival23.html">2023</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="videos.html">Videos</a></li>
-                        <li><a href="contact.html">Contact us</a></li>
-                    </ul>
+
+
+            <div class="container-fluid header-top-wrapper">
+                <div class="header-top">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="images/logo.png" alt="Aharya Logo">
+                        </a>
+                        <div class="logo-text-container">
+                            <div class="title-main">Team Aharya</div>
+                            <div class="title-sub">Centre for Performing Arts</div>
+                        </div>
+                    </div>
+                    <div class="reg-text">
+                        Kerala Sangeetha Nataka Academy Reg No:381/EKM/2023
+                    </div>
                 </div>
             </div>
+            <div class="menu_main">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li id="menu-products" class="has-dropdown active">
+                        <a href="#" class="toggle-dropdown">Festival</a>
+                        <ul class="dropdown">
+                            <li><a href="Festival26.html">2026</a></li>
+                            <li><a href="Festival25.html">2025</a></li>
+                            <li><a href="Festival24.html">2024</a></li>
+                            <li><a href="Festival23.html">2023</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="videos.html">Videos</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                </ul>
+            </div>
         </div>
+    </div>
     </div>
 
     <!-- Hero Section -->
@@ -272,6 +304,130 @@
         </div>
     </div>
 
+    <!-- Expanded Showcase Gallery -->
+    <div class="expanded-gallery"
+        style="padding: 100px 0 140px; background: linear-gradient(to bottom, #08080a, #0c0c0e);">
+        <div class="container-fluid" style="max-width: 1400px;">
+            <div class="text-center mb-5">
+                <h2
+                    style="font-family: 'Cinzel', serif; font-weight: 700; font-size: 42px; color: #d4af37; text-transform: uppercase;">
+                    Curated Moments</h2>
+                <div style="height: 3px; width: 80px; background: #d4af37; margin: 20px auto;"></div>
+                <p
+                    style="color: #bbb; max-width: 600px; margin: 0 auto; font-family: 'Poppins', sans-serif; font-size: 16px;">
+                    An exclusive look into the heart of the 2025 festival, capturing the emotion, discipline, and sheer
+                    grace of the performances.</p>
+            </div>
+
+            <style>
+                .bento-gallery {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    grid-template-rows: repeat(2, 300px);
+                    gap: 20px;
+                    padding: 0 20px;
+                }
+
+                .bento-item {
+                    position: relative;
+                    overflow: hidden;
+                    border-radius: 20px;
+                    border: 1px solid rgba(212, 175, 55, 0.15);
+                    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+                    cursor: pointer;
+                }
+
+                .bento-item img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+                }
+
+                .bento-item::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, transparent 40%);
+                    opacity: 0;
+                    transition: opacity 0.4s ease;
+                }
+
+                .bento-item:hover::after {
+                    opacity: 1;
+                }
+
+                .bento-item:hover img {
+                    transform: scale(1.08);
+                }
+
+                /* Bento Positions */
+                .bento-item:nth-child(1) {
+                    grid-column: 1 / 3;
+                    grid-row: 1 / 3;
+                }
+
+                .bento-item:nth-child(2) {
+                    grid-column: 3 / 5;
+                    grid-row: 1 / 2;
+                }
+
+                .bento-item:nth-child(3) {
+                    grid-column: 3 / 4;
+                    grid-row: 2 / 3;
+                }
+
+                .bento-item:nth-child(4) {
+                    grid-column: 4 / 5;
+                    grid-row: 2 / 3;
+                }
+
+                @media (max-width: 991px) {
+                    .bento-gallery {
+                        grid-template-columns: repeat(2, 1fr);
+                        grid-template-rows: auto;
+                    }
+
+                    .bento-item {
+                        aspect-ratio: 4/3;
+                    }
+
+                    .bento-item:nth-child(1),
+                    .bento-item:nth-child(2),
+                    .bento-item:nth-child(3),
+                    .bento-item:nth-child(4) {
+                        grid-column: span 1;
+                        grid-row: span 1;
+                    }
+
+                    .bento-item:nth-child(1) {
+                        grid-column: 1 / 3;
+                    }
+                }
+
+                @media (max-width: 575px) {
+                    .bento-gallery {
+                        grid-template-columns: 1fr;
+                    }
+
+                    .bento-item:nth-child(1) {
+                        grid-column: span 1;
+                    }
+                }
+            </style>
+
+            <div class="bento-gallery">
+                <div class="bento-item"><img src="images/2025-1.jpg" alt="Highlight 1"></div>
+                <div class="bento-item"><img src="images/2025-2.JPG" alt="Highlight 2"></div>
+                <div class="bento-item"><img src="images/2025-3.JPG" alt="Highlight 3"></div>
+                <div class="bento-item"><img src="images/2025-4.JPG" alt="Highlight 4"></div>
+            </div>
+        </div>
+    </div>
+
     <!-- Image Viewer Modal (Same as 2026) -->
     <div id="image-viewer" class="image-viewer-modal">
         <span class="close-viewer">&times;</span>
@@ -279,111 +435,112 @@
     </div>
 
     <!-- Footer -->
-    
-   <div class="footer_section layout_padding">
-      <div class="container">
-         <div class="footer-row">
-            <div class="footer-col">
-               <h3>About Aharya</h3>
-               <p>Team Aharya is a premier arts education organization dedicated to preserving and promoting Indian classical dance forms through world-class training and national festivals.</p>
-               <div class="social-links">
-                  <a href="https://www.facebook.com/teamaharya/"><i class="fa fa-facebook"></i></a>
-                  <a href="https://www.instagram.com/team.aharya/"><i class="fa fa-instagram"></i></a>
-                  <a href="https://www.linkedin.com/in/team-aharya-27626526b/"><i class="fa fa-linkedin"></i></a>
-               </div>
-            </div>
-            <div class="footer-col">
-               <h3>Quick Links</h3>
-               <ul class="footer-links">
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="about.html">About Us</a></li>
-                  <li><a href="services.html">Our Services</a></li>
-                  <li><a href="gallery.html">Photo Gallery</a></li>
-                  <li><a href="videos.html">Video Gallery</a></li>
-                  <li><a href="contact.html">Contact Us</a></li>
-               </ul>
-            </div>
-            <div class="footer-col">
-               <h3>Festivals</h3>
-               <ul class="footer-links">
-                  <li><a href="Festival26.html">Festival 2026</a></li>
-                  <li><a href="Festival25.html">Festival 2025</a></li>
-                  <li><a href="Festival24.html">Festival 2024</a></li>
-                  <li><a href="Festival23.html">Festival 2023</a></li>
-               </ul>
-            </div>
-            <div class="footer-col">
-               <h3>Contact Us</h3>
-               <div class="footer-contact-item">
-                  <i class="fa fa-map-marker"></i>
-                  <div class="footer-contact-info">
-                     Kalady, Ernakulam, Kerala<br>
-                     Reg No: 381/EKM/2023
-                  </div>
-               </div>
-               <div class="footer-contact-item">
-                  <i class="fa fa-phone"></i>
-                  <div class="footer-contact-info">
-                     <a href="tel:+919074350422">+91 9074350422</a><br>
-                     <a href="tel:+918281934233">+91 8281934233</a>
-                  </div>
-               </div>
-               <div class="footer-contact-item">
-                  <i class="fa fa-envelope"></i>
-                  <div class="footer-contact-info">
-                     <a href="mailto:teamaharyaa@gmail.com">teamaharyaa@gmail.com</a>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
 
-   <div class="copyright_section">
-      <div class="container">
-         <p class="copyright_text">2022 All Rights Reserved. Design by CRUDOPS PVT. LTD</p>
-      </div>
-   </div>
+    <div class="footer_section layout_padding">
+        <div class="container">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <h3>About Aharya</h3>
+                    <p>Team Aharya is a premier arts education organization dedicated to preserving and promoting Indian
+                        classical dance forms through world-class training and national festivals.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/teamaharya/"><i class="fa fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/team.aharya/"><i class="fa fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/team-aharya-27626526b/"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="gallery.html">Photo Gallery</a></li>
+                        <li><a href="videos.html">Video Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Festivals</h3>
+                    <ul class="footer-links">
+                        <li><a href="Festival26.html">Festival 2026</a></li>
+                        <li><a href="Festival25.html">Festival 2025</a></li>
+                        <li><a href="Festival24.html">Festival 2024</a></li>
+                        <li><a href="Festival23.html">Festival 2023</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <div class="footer-contact-item">
+                        <i class="fa fa-map-marker"></i>
+                        <div class="footer-contact-info">
+                            Kalady, Ernakulam, Kerala<br>
+                            Reg No: 381/EKM/2023
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa fa-phone"></i>
+                        <div class="footer-contact-info">
+                            <a href="tel:+919074350422">+91 9074350422</a><br>
+                            <a href="tel:+918281934233">+91 8281934233</a>
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa fa-envelope"></i>
+                        <div class="footer-contact-info">
+                            <a href="mailto:teamaharyaa@gmail.com">teamaharyaa@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="copyright_section">
+        <div class="container">
+            <p class="copyright_text">2022 All Rights Reserved. Design by CRUDOPS PVT. LTD</p>
+        </div>
+    </div>
 
 
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
-       <script>
-      document.addEventListener('DOMContentLoaded', function () {
-         // Mobile Menu Toggler
-         var navbarToggler = document.querySelector('.mobile_menu .navbar-toggler');
-         var navbarCollapse = document.getElementById('navbarNav');
-         if (navbarToggler && navbarCollapse) {
-            navbarToggler.addEventListener('click', function (e) {
-               e.preventDefault();
-               e.stopPropagation();
-               navbarCollapse.classList.toggle('show');
-               this.setAttribute('aria-expanded', navbarCollapse.classList.contains('show'));
-            });
-         }
-
-         // Festival Dropdown Toggle
-         var dropdownToggle = document.getElementById('dropdown-toggle');
-         var dropdownMenu = document.getElementById('dropdown-menu');
-         if (dropdownToggle && dropdownMenu) {
-            dropdownToggle.addEventListener('click', function (e) {
-               e.preventDefault();
-               dropdownMenu.classList.toggle('active');
-               this.classList.toggle('open');
-            });
-         }
-
-         // Close menu when clicking outside
-         document.addEventListener('click', function (e) {
-            if (navbarCollapse && navbarCollapse.classList.contains('show')) {
-               if (!navbarCollapse.contains(e.target) && navbarToggler && !navbarToggler.contains(e.target)) {
-                  navbarCollapse.classList.remove('show');
-                  navbarToggler.setAttribute('aria-expanded', 'false');
-               }
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Mobile Menu Toggler
+            var navbarToggler = document.querySelector('.mobile_menu .navbar-toggler');
+            var navbarCollapse = document.getElementById('navbarNav');
+            if (navbarToggler && navbarCollapse) {
+                navbarToggler.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    navbarCollapse.classList.toggle('show');
+                    this.setAttribute('aria-expanded', navbarCollapse.classList.contains('show'));
+                });
             }
-         });
-      });
-   </script>
+
+            // Festival Dropdown Toggle
+            var dropdownToggle = document.getElementById('dropdown-toggle');
+            var dropdownMenu = document.getElementById('dropdown-menu');
+            if (dropdownToggle && dropdownMenu) {
+                dropdownToggle.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    dropdownMenu.classList.toggle('active');
+                    this.classList.toggle('open');
+                });
+            }
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function (e) {
+                if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+                    if (!navbarCollapse.contains(e.target) && navbarToggler && !navbarToggler.contains(e.target)) {
+                        navbarCollapse.classList.remove('show');
+                        navbarToggler.setAttribute('aria-expanded', 'false');
+                    }
+                }
+            });
+        });
+    </script>
 
 </body>
 

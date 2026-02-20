@@ -50,143 +50,458 @@
          text-transform: uppercase;
       }
 
-      .service-main-section {
-         padding: 100px 0;
-         background: #0c0c0e;
+      /* Parallax / Feature Card Layout */
+      .premium-section {
+         padding: 120px 0;
+         background-color: #0c0c0e;
       }
 
-      .service-card {
-         background: #16161a;
-         border-radius: 40px;
-         overflow: hidden;
-         border: 1px solid #28282e;
-         transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-         max-width: 1100px;
-         margin: 0 auto;
+      .feature-row {
          display: flex;
          flex-wrap: wrap;
          align-items: center;
+         margin-bottom: 150px;
+         max-width: 1400px;
+         margin-left: auto;
+         margin-right: auto;
       }
 
-      .service-card:hover {
-         border-color: #d4af37;
-         box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6);
-         transform: translateY(-10px);
+      .feature-row:last-child {
+         margin-bottom: 0;
       }
 
-      .service-img-side {
+      .row-reverse {
+         flex-direction: row-reverse;
+      }
+
+      .feature-image {
          flex: 0 0 50%;
          max-width: 50%;
-         height: 600px;
+         padding: 0 50px;
+      }
+
+      .img-container {
+         border-radius: 8px;
          overflow: hidden;
+         position: relative;
+         box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8);
       }
 
-      .service-img-side img {
+      .img-container img {
          width: 100%;
-         height: 100%;
+         height: 600px;
          object-fit: cover;
-         transition: transform 0.8s ease;
+         transition: transform 1.5s ease;
       }
 
-      .service-card:hover .service-img-side img {
-         transform: scale(1.1);
+      .img-container:hover img {
+         transform: scale(1.05);
       }
 
-      .service-content-side {
+      .feature-content {
          flex: 0 0 50%;
          max-width: 50%;
-         padding: 80px;
+         padding: 0 60px;
       }
 
-      .service-label {
+      .pre-title {
+         font-family: 'Poppins', sans-serif;
          color: #d4af37;
          text-transform: uppercase;
-         letter-spacing: 4px;
-         font-weight: 700;
+         letter-spacing: 5px;
          font-size: 14px;
-         margin-bottom: 15px;
+         font-weight: 600;
+         margin-bottom: 20px;
          display: block;
       }
 
-      .service-title {
-         font-size: 52px;
-         font-weight: 900;
-         color: #ffffff;
+      .feature-content h2 {
+         font-family: 'Cinzel', serif;
+         font-size: 48px;
+         color: #fff;
          margin-bottom: 30px;
-         line-height: 1.1;
+         line-height: 1.2;
       }
 
-      .service-description {
+      .feature-content p {
+         font-family: 'Poppins', sans-serif;
          font-size: 18px;
-         line-height: 1.8;
-         color: #a0a0a5;
-         margin-bottom: 40px;
+         color: #bbb;
+         line-height: 1.9;
+         margin-bottom: 20px;
       }
 
-      .service-points {
+      .feature-content ul {
          list-style: none;
          padding: 0;
-         margin-bottom: 40px;
+         margin-top: 30px;
       }
 
-      .service-points li {
-         position: relative;
-         padding-left: 30px;
+      .feature-content ul li {
+         font-family: 'Poppins', sans-serif;
+         font-size: 18px;
+         color: #ddd;
          margin-bottom: 15px;
-         color: #ffffff;
-         font-weight: 500;
+         padding-left: 30px;
+         position: relative;
       }
 
-      .service-points li::before {
-         content: '✓';
+      .feature-content ul li::before {
+         content: "—";
+         color: #d4af37;
          position: absolute;
          left: 0;
-         color: #d4af37;
-         font-weight: 900;
+         font-weight: bold;
       }
 
-      .service-cta {
+      /* Information Blocks */
+      .info-blocks-section {
+         padding: 0 0 100px 0;
+         background-color: #0c0c0e;
+      }
+
+      .info-grid {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+         gap: 40px;
+         padding: 0 40px;
+      }
+
+      .info-box {
+         background: #16161a;
+         padding: 50px 40px;
+         border-radius: 20px;
+         border-top: 4px solid #d4af37;
+         transition: transform 0.4s ease, box-shadow 0.4s ease;
+      }
+
+      .info-box:hover {
+         transform: translateY(-10px);
+         box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+      }
+
+      .info-icon {
+         width: 70px;
+         height: 70px;
+         background: rgba(212, 175, 55, 0.1);
+         color: #d4af37;
+         font-size: 30px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         border-radius: 50%;
+         margin-bottom: 30px;
+      }
+
+      .info-box h3 {
+         font-family: 'Cinzel', serif;
+         font-size: 28px;
+         color: #fff;
+         margin-bottom: 20px;
+      }
+
+      .info-desc {
+         color: #bbb;
+         font-size: 16px;
+         line-height: 1.7;
+         margin-bottom: 30px;
+      }
+
+      .info-box ul {
+         list-style: none;
+         padding: 0;
+         margin: 0;
+      }
+
+      .info-box ul li {
+         color: #ddd;
+         font-size: 16px;
+         padding-left: 25px;
+         position: relative;
+         margin-bottom: 12px;
+         line-height: 1.5;
+         font-family: 'Poppins', sans-serif;
+      }
+
+      .info-box ul li::before {
+         content: "❖";
+         color: #d4af37;
+         position: absolute;
+         left: 0;
+         top: 2px;
+         font-size: 14px;
+      }
+
+      /* Locations Grid */
+      .locations-wrapper {
+         background: #121215;
+         padding: 100px 0;
+         border-top: 1px solid rgba(212, 175, 55, 0.1);
+         border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+      }
+
+      .loc-header {
+         text-align: center;
+         margin-bottom: 80px;
+      }
+
+      .loc-header h2 {
+         font-family: 'Cinzel', serif;
+         font-size: 42px;
+         color: #d4af37;
+         margin-top: 10px;
+      }
+
+      .loc-grid {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+         gap: 50px;
+         max-width: 1400px;
+         margin: 0 auto;
+         padding: 0 40px;
+      }
+
+      .loc-district {
+         background: #1a1a1f;
+         padding: 40px;
+         border-radius: 12px;
+         border-left: 4px solid #d4af37;
+         transition: transform 0.4s ease, box-shadow 0.4s ease;
+      }
+
+      .loc-district:hover {
+         transform: translateY(-10px);
+         box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+      }
+
+      .loc-district h3 {
+         font-family: 'Cinzel', serif;
+         font-size: 26px;
+         color: #fff;
+         border-bottom: 1px solid #333;
+         padding-bottom: 15px;
+         margin-bottom: 30px;
+      }
+
+      .loc-item {
+         margin-bottom: 30px;
+      }
+
+      .loc-item:last-child {
+         margin-bottom: 0;
+      }
+
+      .loc-item h4 {
+         font-family: 'Poppins', sans-serif;
+         color: #d4af37;
+         font-size: 20px;
+         margin-bottom: 8px;
+         font-weight: 600;
+      }
+
+      .loc-item p {
+         font-size: 16px;
+         color: #bbb;
+         margin-bottom: 12px;
+         line-height: 1.5;
+      }
+
+      .time-tag {
          display: inline-block;
+         padding: 6px 15px;
+         background: rgba(212, 175, 55, 0.1);
+         color: #fff;
+         border: 1px solid rgba(212, 175, 55, 0.3);
+         border-radius: 6px;
+         font-size: 14px;
+         font-weight: 500;
+         letter-spacing: 1px;
+      }
+
+      /* CTA section */
+      .cta-banner {
+         padding: 120px 0;
+         text-align: center;
+         background: linear-gradient(rgba(12, 12, 14, 0.85), rgba(12, 12, 14, 0.95)), url('images/banner-bg.png') center/cover fixed;
+         position: relative;
+         z-index: 10;
+      }
+
+      .cta-banner .container {
+         position: relative;
+         z-index: 20;
+      }
+
+      .cta-banner h2 {
+         font-family: 'Cinzel', serif;
+         font-size: 50px;
+         color: #fff;
+         margin-bottom: 30px;
+      }
+
+      .cta-banner p {
+         color: #bbb;
+         max-width: 700px;
+         margin: 0 auto 40px;
+         font-size: 18px;
+         line-height: 1.8;
+      }
+
+      .gold-btn {
+         display: inline-block;
+         padding: 20px 55px;
          background: #d4af37;
-         color: #000;
-         padding: 18px 40px;
-         border-radius: 50px;
+         color: #0c0c0e;
+         font-family: 'Poppins', sans-serif;
+         font-size: 18px;
          font-weight: 700;
          text-transform: uppercase;
-         letter-spacing: 2px;
-         transition: all 0.3s ease;
+         letter-spacing: 3px;
+         border-radius: 50px;
+         transition: all 0.4s ease;
+         text-decoration: none;
+         position: relative;
+         z-index: 999;
+         pointer-events: auto;
+         cursor: pointer;
+      }
+
+      .gold-btn:hover {
+         background: #fff;
+         color: #000;
+         box-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+         transform: scale(1.05);
          text-decoration: none;
       }
 
-      .service-cta:hover {
-         background: #ffffff;
-         color: #000;
-         transform: scale(1.05);
+      /* View Gallery Button */
+      .outline-gold-btn {
+         display: inline-block;
+         padding: 18px 50px;
+         border: 2px solid #d4af37;
+         color: #d4af37;
+         font-family: 'Poppins', sans-serif;
+         font-size: 16px;
+         font-weight: 700;
+         text-transform: uppercase;
+         letter-spacing: 3px;
+         border-radius: 50px;
+         text-decoration: none;
+         transition: background 0.4s ease, color 0.4s ease;
+         background: transparent;
+         position: relative;
+         z-index: 100;
+         pointer-events: auto;
+         cursor: pointer;
+      }
+
+      .outline-gold-btn:hover {
+         background: #d4af37;
+         color: #0c0c0e;
          text-decoration: none;
       }
 
       @media (max-width: 991px) {
 
-         .service-img-side,
-         .service-content-side {
+         .feature-image,
+         .feature-content {
             flex: 0 0 100%;
             max-width: 100%;
+            padding: 0 20px;
          }
 
-         .service-img-side {
+         .img-container img {
             height: 400px;
          }
 
-         .service-content-side {
-            padding: 40px;
+         .feature-content {
+            margin-top: 50px;
          }
 
-         .service-title {
+         .feature-row {
+            margin-bottom: 80px;
+         }
+      }
+
+      @media (max-width: 768px) {
+         .premium-section {
+            padding: 80px 0 40px;
+         }
+
+         .feature-content h2 {
+            font-size: 34px;
+         }
+
+         .info-blocks-section {
+            padding: 0 0 60px 0;
+         }
+
+         .info-grid {
+            grid-template-columns: 1fr;
+            padding: 0 20px;
+            gap: 30px;
+         }
+
+         .info-box {
+            padding: 35px 25px;
+         }
+
+         .locations-wrapper {
+            padding: 60px 0;
+         }
+
+         .loc-header {
+            margin-bottom: 40px;
+         }
+
+         .loc-header h2 {
+            font-size: 32px;
+         }
+
+         .loc-grid {
+            grid-template-columns: 1fr;
+            padding: 0 20px;
+            gap: 30px;
+         }
+
+         .loc-district {
+            padding: 30px 20px;
+         }
+
+         .loc-district h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+         }
+
+         .time-tag {
+            font-size: 13px;
+            padding: 6px 10px;
+            display: inline-block;
+            margin-top: 5px;
+         }
+
+         .loc-district-column {
+            display: flex;
+            flex-direction: column;
+            gap: 30px !important;
+         }
+
+         .cta-banner {
+            padding: 80px 20px;
+         }
+
+         .cta-banner h2 {
             font-size: 36px;
+         }
+
+         .gold-btn {
+            padding: 16px 40px;
+            font-size: 16px;
          }
       }
    </style>
-   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Tillana:wght@400;700&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Tillana:wght@400;700&display=swap"
+      rel="stylesheet">
 </head>
 
 <body class="services-page">
@@ -220,8 +535,8 @@
                </div>
             </nav>
          </div>
-         
-         
+
+
          <div class="container-fluid header-top-wrapper">
             <div class="header-top">
                <div class="logo">
@@ -238,27 +553,27 @@
                </div>
             </div>
          </div>
-<div class="menu_main">
-               <ul>
-                  <li><a href="index.html">Home</a></li>
-                  <li id="menu-products" class="has-dropdown active">
-                     <a href="#" class="toggle-dropdown">Festival</a>
-                     <ul class="dropdown">
-                        <li><a href="Festival26.html">2026</a></li>
-                        <li><a href="Festival25.html">2025</a></li>
-                        <li><a href="Festival24.html">2024</a></li>
-                        <li><a href="Festival23.html">2023</a></li>
-                     </ul>
-                  </li>
-                  <li><a href="about.html">About</a></li>
-                  <li class="active"><a href="services.html">Services</a></li>
-                  <li><a href="gallery.html">Gallery</a></li>
-                  <li><a href="videos.html">Videos</a></li>
-                  <li><a href="contact.html">Contact us</a></li>
-               </ul>
-            </div>
+         <div class="menu_main">
+            <ul>
+               <li><a href="index.html">Home</a></li>
+               <li id="menu-products" class="has-dropdown active">
+                  <a href="#" class="toggle-dropdown">Festival</a>
+                  <ul class="dropdown">
+                     <li><a href="Festival26.html">2026</a></li>
+                     <li><a href="Festival25.html">2025</a></li>
+                     <li><a href="Festival24.html">2024</a></li>
+                     <li><a href="Festival23.html">2023</a></li>
+                  </ul>
+               </li>
+               <li><a href="about.html">About</a></li>
+               <li class="active"><a href="services.html">Services</a></li>
+               <li><a href="gallery.html">Gallery</a></li>
+               <li><a href="videos.html">Videos</a></li>
+               <li><a href="contact.html">Contact us</a></li>
+            </ul>
          </div>
       </div>
+   </div>
    </div>
 
    <!-- Hero Section -->
@@ -267,41 +582,283 @@
       <h1>Our Services</h1>
    </section>
 
-   <!-- Main Service Section -->
-   <section class="service-main-section">
-      <div class="container">
-         <div class="service-card">
-            <div class="service-img-side">
-               <img src="images/img-4.jpg" alt="Aharya Sabha">
+   <!-- Feature Sections -->
+   <section class="premium-section" style="padding-bottom: 80px;">
+      <div class="container-fluid" style="max-width: 1400px; margin: 0 auto;">
+
+         <!-- Row 1: The Philosophy -->
+         <div class="feature-row" style="margin-bottom: 0;">
+            <div class="feature-image">
+               <div class="img-container">
+                  <img src="images/who_we_are_real.jpg" alt="Aharya Gurukula Training">
+               </div>
             </div>
-            <div class="service-content-side">
-               <span class="service-label">Flagship Program</span>
-               <h2 class="service-title">Aharya Sabha</h2>
-               <p class="service-description">
-                  At Team Aharya, we provide professional-level dance training designed to awaken and equip the artist
-                  within you. Our flagship service, **Aharya Sabha**, bridges the gap between traditional wisdom and
-                  professional performance excellence.
-               </p>
-               <ul class="service-points">
-                  <li>Professional Level Dance Training</li>
-                  <li>Expert Faculty Guidance</li>
-                  <li>Artistic Development Workshops</li>
-                  <li>Nritta - Natya Grandha Education</li>
+            <div class="feature-content">
+               <span class="pre-title">The Gurukula Spirit</span>
+               <h2>Aharya School of Classical Dance</h2>
+               <p>Working in association with Team Aharya, Aharya School of Classical Dance functions as a dedicated
+                  centre for systematic training in Indian classical dance, rooted in tradition, discipline, and
+                  aesthetic excellence.</p>
+               <p>Our training follows the Gurukula spirit — nurturing artistry with depth, clarity, and cultural
+                  responsibility.</p>
+               <p
+                  style="font-style: italic; color: #d4af37; border-left: 3px solid #d4af37; padding-left: 20px; margin-top: 30px;">
+                  "We are not a competition-oriented training centre. Our focus is on cultivating true artistic
+                  understanding, classical integrity, and a lifelong relationship with the art form."</p>
+            </div>
+         </div>
+
+      </div>
+   </section>
+
+   <!-- Pedagogy & Services Block (No Images) -->
+   <section class="info-blocks-section">
+      <div class="container-fluid" style="max-width: 1400px; margin: 0 auto;">
+         <div class="info-grid">
+
+            <!-- Faculty -->
+            <div class="info-box">
+               <div class="info-icon"><i class="fa fa-users"></i></div>
+               <h3>Faculty</h3>
+               <p class="info-desc">Guided by an exceptional lineage of artistes, our faculty brings decades of rigorous
+                  classical training and performance experience to the classroom.</p>
+               <ul>
+                  <li>Praveen Kaimadathil</li>
+                  <li>Sreelakshmi Warrier</li>
+                  <li>Aparna Devi</li>
+                  <li>Anjali Sankar</li>
+                  <li>Adithya Sivadas</li>
                </ul>
-               <a href="contact.html" class="service-cta">Join the Movement</a>
             </div>
+
+            <!-- Levels of Training -->
+            <div class="info-box">
+               <div class="info-icon"><i class="fa fa-graduation-cap"></i></div>
+               <h3>Levels of Training</h3>
+               <p class="info-desc">Our training is centred on technique, abhinaya, theory, stage discipline, and a deep
+                  respect for the classical tradition.</p>
+               <ul>
+                  <li>Beginner Level</li>
+                  <li>Intermediate Level</li>
+                  <li>Advanced Level</li>
+                  <li>Mothers’ Special Batch</li>
+               </ul>
+            </div>
+
+            <!-- Online Services -->
+            <div class="info-box">
+               <div class="info-icon"><i class="fa fa-globe"></i></div>
+               <h3>Online Services</h3>
+               <p class="info-desc">Embracing modern mediums without compromising on traditional rigor. All training
+                  modules offered offline are strictly available in online mode globally.</p>
+               <ul>
+                  <li>Online Nāṭyaśāstra Workshops</li>
+                  <li>Bharatanatyam Item Workshops</li>
+                  <li>Theory & Abhinaya Sessions</li>
+                  <li>Structured Level-Based Online Training</li>
+               </ul>
+            </div>
+
          </div>
       </div>
    </section>
 
+   <!-- Class Photo Gallery Section -->
+   <section class="class-gallery-section"
+      style="padding: 100px 0; background: #08080a; border-top: 1px solid rgba(212,175,55,0.1);">
+      <div class="container-fluid" style="max-width: 1400px; margin: 0 auto;">
+         <div class="text-center" style="margin-bottom: 60px;">
+            <span
+               style="font-family: 'Poppins', sans-serif; color: #d4af37; text-transform: uppercase; letter-spacing: 5px; font-size: 14px; font-weight: 600;">In
+               The Studio</span>
+            <h2
+               style="font-family: 'Cinzel', serif; font-size: 42px; color: #fff; margin-top: 15px; margin-bottom: 20px;">
+               From Our Classes</h2>
+            <div style="height: 3px; width: 80px; background: #d4af37; margin: 0 auto 25px;"></div>
+            <p
+               style="color: #bbb; max-width: 600px; margin: 0 auto; font-family: 'Poppins', sans-serif; font-size: 16px; line-height: 1.8;">
+               A glimpse into the world of our training sessions — discipline, devotion, and artistry in motion.</p>
+         </div>
+
+         <style>
+            .class-photo-grid {
+               display: grid;
+               grid-template-columns: repeat(3, 1fr);
+               grid-template-rows: repeat(2, 280px);
+               gap: 18px;
+               padding: 0 20px;
+            }
+
+            .class-photo-item {
+               position: relative;
+               overflow: hidden;
+               border-radius: 18px;
+               border: 1px solid rgba(212, 175, 55, 0.12);
+               box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+               cursor: pointer;
+            }
+
+            .class-photo-item img {
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+               transition: transform 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+            }
+
+            .class-photo-item::after {
+               content: '';
+               position: absolute;
+               inset: 0;
+               background: linear-gradient(to top, rgba(0, 0, 0, 0.55) 0%, transparent 50%);
+               opacity: 0;
+               transition: opacity 0.4s ease;
+            }
+
+            .class-photo-item:hover img {
+               transform: scale(1.08);
+            }
+
+            .class-photo-item:hover::after {
+               opacity: 1;
+            }
+
+            /* Featured large item */
+            .class-photo-item:nth-child(1) {
+               grid-column: 1 / 3;
+               grid-row: 1 / 3;
+            }
+
+            @media (max-width: 991px) {
+               .class-photo-grid {
+                  grid-template-columns: repeat(2, 1fr);
+                  grid-template-rows: auto;
+               }
+
+               .class-photo-item {
+                  aspect-ratio: 4/3;
+               }
+
+               .class-photo-item:nth-child(1) {
+                  grid-column: span 2;
+                  grid-row: span 1;
+               }
+            }
+
+            @media (max-width: 575px) {
+               .class-photo-grid {
+                  grid-template-columns: 1fr;
+               }
+
+               .class-photo-item:nth-child(1) {
+                  grid-column: span 1;
+               }
+            }
+         </style>
+
+         <div class="class-photo-grid">
+            <div class="class-photo-item"><img src="images/gl1.JPG" alt="Class Photo 1"></div>
+            <div class="class-photo-item"><img src="images/gl2.JPG" alt="Class Photo 2"></div>
+            <div class="class-photo-item"><img src="images/gl3.JPG" alt="Class Photo 3"></div>
+            <div class="class-photo-item"><img src="images/gl4.JPG" alt="Class Photo 4"></div>
+            <div class="class-photo-item"><img src="images/gl5.jpg" alt="Class Photo 5"></div>
+         </div>
+
+         <div class="text-center" style="margin-top: 55px; position: relative; z-index: 100;">
+            <a href="gallery.html" class="outline-gold-btn">
+               <i class="fa fa-images" style="margin-right: 10px;"></i> View Full Gallery
+            </a>
+         </div>
+      </div>
+   </section>
+
+   <!-- Locations Section -->
+   <section class="locations-wrapper">
+      <div class="loc-header">
+         <span class="pre-title" style="margin-bottom: 10px;">Our Presence</span>
+         <h2>Training Centres</h2>
+      </div>
+      <div class="loc-grid">
+
+         <!-- Ernakulam -->
+         <div class="loc-district">
+            <h3>Ernakulam District</h3>
+            <div class="loc-item">
+               <h4>Kalady</h4>
+               <p>Art of Living – Temple of Knowledge, Poorna Road</p>
+               <span class="time-tag">Every Sunday | 9:30 AM – 11:30 AM</span>
+            </div>
+            <div class="loc-item">
+               <h4>Angamaly</h4>
+               <p>Jaganath Auditorium, Near Durga Devi Temple, Vengoor</p>
+               <span class="time-tag">Every Saturday | 5:00 PM – 7:30 PM</span>
+            </div>
+            <div class="loc-item">
+               <h4>Mookkannoor</h4>
+               <p>Korattukudy Building, Floor No. 3, Near Josh Mall</p>
+               <span class="time-tag">Every Sunday | 4:00 PM – 6:40 PM</span>
+            </div>
+         </div>
+
+         <!-- Thrissur -->
+         <div class="loc-district">
+            <h3>Thrissur District</h3>
+            <div class="loc-item">
+               <h4>North Chalakudy</h4>
+               <p>Pottachira SNDP Hall, Near Madathil Kavu Temple</p>
+               <span class="time-tag">Every Sunday | 2:30 PM – 4:30 PM</span>
+            </div>
+            <div class="loc-item">
+               <h4>Cheruvaloor</h4>
+               <p>NSS Hall (1st Floor), Near Pisharath Sreekrishna Temple</p>
+               <span class="time-tag">Every Sunday | 10:30 AM – 1:00 PM</span>
+            </div>
+         </div>
+
+         <div class="loc-district-column" style="display: flex; flex-direction: column; gap: 50px;">
+            <!-- Palakkad -->
+            <div class="loc-district" style="height: auto;">
+               <h3>Palakkad District</h3>
+               <div class="loc-item">
+                  <h4>Vellinezhi</h4>
+                  <p>NSS Hall, Near Kanthalloor Temple</p>
+                  <span class="time-tag">Every Sunday | 10:30 AM – 1:30 PM</span>
+               </div>
+            </div>
+
+            <!-- Hyderabad -->
+            <div class="loc-district" style="height: auto;">
+               <h3>Hyderabad</h3>
+               <div class="loc-item">
+                  <h4>Jubilee Hills</h4>
+                  <p>Sanskriti Play School</p>
+                  <span class="time-tag">Mon & Wed | 5:30 PM – 7:00 PM</span>
+               </div>
+            </div>
+         </div>
+
+      </div>
+   </section>
+
+   <!-- CTA Section -->
+   <section class="cta-banner">
+      <div class="container">
+         <h2>Begin Your Artistic Journey</h2>
+         <p>Join Aharya School of Classical Dance to discover the depths of traditional artistry, guided by passionate
+            mentors with a lifelong relationship with the art form.</p>
+         <a href="https://docs.google.com/forms/d/e/1FAIpQLSd71XrNcplhnGzwkRiWqpcLp8YiVqDd_5kNXp9qLfA6Jjopfg/viewform?usp=sf_link"
+            target="_blank" class="gold-btn">Register Now</a>
+      </div>
+   </section>
+
    <!-- Footer -->
-   
+
    <div class="footer_section layout_padding">
       <div class="container">
          <div class="footer-row">
             <div class="footer-col">
                <h3>About Aharya</h3>
-               <p>Team Aharya is a premier arts education organization dedicated to preserving and promoting Indian classical dance forms through world-class training and national festivals.</p>
+               <p>Team Aharya is a premier arts education organization dedicated to preserving and promoting Indian
+                  classical dance forms through world-class training and national festivals.</p>
                <div class="social-links">
                   <a href="https://www.facebook.com/teamaharya/"><i class="fa fa-facebook"></i></a>
                   <a href="https://www.instagram.com/team.aharya/"><i class="fa fa-instagram"></i></a>

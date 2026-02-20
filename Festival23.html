@@ -15,7 +15,7 @@
       rel="stylesheet">
    <style>
       .fest-23-hero {
-         background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(12, 12, 14, 1)), url('images/festimg4.jpeg');
+         background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(12, 12, 14, 1)), url('images/2023-2.JPG');
          background-size: cover;
          background-position: center;
       }
@@ -97,7 +97,8 @@
          margin: 0;
       }
    </style>
-   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Tillana:wght@400;700&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Tillana:wght@400;700&display=swap"
+      rel="stylesheet">
 </head>
 
 <body class="festival-2023-page" style="background-color: #0c0c0e;">
@@ -131,8 +132,8 @@
                </div>
             </nav>
          </div>
-         
-         
+
+
          <div class="container-fluid header-top-wrapper">
             <div class="header-top">
                <div class="logo">
@@ -149,27 +150,27 @@
                </div>
             </div>
          </div>
-<div class="menu_main">
-               <ul>
-                  <li><a href="index.html">Home</a></li>
-                  <li id="menu-products" class="has-dropdown active">
-                     <a href="#" class="toggle-dropdown">Festival</a>
-                     <ul class="dropdown">
-                        <li><a href="Festival26.html">2026</a></li>
-                        <li><a href="Festival25.html">2025</a></li>
-                        <li><a href="Festival24.html">2024</a></li>
-                        <li><a href="Festival23.html">2023</a></li>
-                     </ul>
-                  </li>
-                  <li><a href="about.html">About</a></li>
-                  <li><a href="services.html">Services</a></li>
-                  <li><a href="gallery.html">Gallery</a></li>
-                  <li><a href="videos.html">Videos</a></li>
-                  <li><a href="contact.html">Contact us</a></li>
-               </ul>
-            </div>
+         <div class="menu_main">
+            <ul>
+               <li><a href="index.html">Home</a></li>
+               <li id="menu-products" class="has-dropdown active">
+                  <a href="#" class="toggle-dropdown">Festival</a>
+                  <ul class="dropdown">
+                     <li><a href="Festival26.html">2026</a></li>
+                     <li><a href="Festival25.html">2025</a></li>
+                     <li><a href="Festival24.html">2024</a></li>
+                     <li><a href="Festival23.html">2023</a></li>
+                  </ul>
+               </li>
+               <li><a href="about.html">About</a></li>
+               <li><a href="services.html">Services</a></li>
+               <li><a href="gallery.html">Gallery</a></li>
+               <li><a href="videos.html">Videos</a></li>
+               <li><a href="contact.html">Contact us</a></li>
+            </ul>
          </div>
       </div>
+   </div>
    </div>
 
    <!-- Hero Section -->
@@ -279,6 +280,58 @@
       </div>
    </div>
 
+   <!-- Expanded Showcase Gallery -->
+   <div class="expanded-gallery" style="padding: 0 0 100px 0; background-color: #0c0c0e;">
+      <div class="container-fluid" style="max-width: 1400px;">
+         <div class="text-center mb-5">
+            <h2
+               style="font-family: 'Cinzel', serif; font-weight: 700; font-size: 36px; color: #fff; text-transform: uppercase;">
+               Festival Highlights</h2>
+            <div style="height: 3px; width: 60px; background: #d4af37; margin: 20px auto;"></div>
+         </div>
+
+         <style>
+            .grid-gallery {
+               display: grid;
+               grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+               gap: 25px;
+               padding: 0 30px;
+            }
+
+            .gallery-item {
+               position: relative;
+               overflow: hidden;
+               border-radius: 16px;
+               aspect-ratio: 4/3;
+               border: 1px solid rgba(212, 175, 55, 0.15);
+               box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+               cursor: pointer;
+            }
+
+            .gallery-item img {
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+               transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+            }
+
+            .gallery-item:hover img {
+               transform: scale(1.1);
+            }
+         </style>
+
+         <div class="grid-gallery">
+            <div class="gallery-item"><img src="images/2023-1.jpg" alt="Highlight 1"></div>
+            <div class="gallery-item"><img src="images/2023-2.JPG" alt="Highlight 2"></div>
+            <div class="gallery-item"><img src="images/2023-3.JPG" alt="Highlight 3"></div>
+            <div class="gallery-item"><img src="images/2023-4.JPG" alt="Highlight 4"></div>
+            <div class="gallery-item"><img src="images/2023-5.JPG" alt="Highlight 5"></div>
+            <div class="gallery-item"><img src="images/2023-6.JPG" alt="Highlight 6"></div>
+            <div class="gallery-item"><img src="images/2023-7.JPG" alt="Highlight 7"></div>
+         </div>
+      </div>
+   </div>
+
    <!-- Image Viewer Modal -->
    <div id="image-viewer" class="image-viewer-modal">
       <span class="close-viewer">&times;</span>
@@ -286,13 +339,14 @@
    </div>
 
    <!-- Footer -->
-   
+
    <div class="footer_section layout_padding">
       <div class="container">
          <div class="footer-row">
             <div class="footer-col">
                <h3>About Aharya</h3>
-               <p>Team Aharya is a premier arts education organization dedicated to preserving and promoting Indian classical dance forms through world-class training and national festivals.</p>
+               <p>Team Aharya is a premier arts education organization dedicated to preserving and promoting Indian
+                  classical dance forms through world-class training and national festivals.</p>
                <div class="social-links">
                   <a href="https://www.facebook.com/teamaharya/"><i class="fa fa-facebook"></i></a>
                   <a href="https://www.instagram.com/team.aharya/"><i class="fa fa-instagram"></i></a>
@@ -355,7 +409,7 @@
 
    <script src="js/jquery.min.js"></script>
    <script src="js/bootstrap.bundle.min.js"></script>
-      <script>
+   <script>
       document.addEventListener('DOMContentLoaded', function () {
          // Mobile Menu Toggler
          var navbarToggler = document.querySelector('.mobile_menu .navbar-toggler');
